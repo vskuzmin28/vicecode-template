@@ -1,0 +1,23 @@
+{
+  "name": "vicecode-template",
+  "version": "1.0.0",
+  "description": "template for create site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vskuzmin28/vicecode-template.git"
+  },
+  "author": "vitaly kuzmin (vskuzmin28)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vskuzmin28/vicecode-template/issues"
+  },
+  "homepage": "https://github.com/vskuzmin28/vicecode-template#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.12",
+    "gulp": "^4.0.2"
+  }
+}
