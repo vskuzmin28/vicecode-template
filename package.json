@@ -18,6 +18,7 @@
   "homepage": "https://github.com/vskuzmin28/vicecode-template#readme",
   "devDependencies": {
     "browser-sync": "^2.26.12",
-    "gulp": "^4.0.2"
+    "gulp": "^4.0.2",
+    "pug": "^3.0.0"
   }
 }

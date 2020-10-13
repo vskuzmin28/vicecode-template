@@ -1,13 +1,13 @@
-let production = 'dist'
+let dist = 'dist'
 let source = 'src'
 
 let path = {
     build: {
-        html: production + '/',
-        css: production + '/css/',
-        js: production + '/js/',
-        img: production +'/img/',
-        fonts: production + '/fonts/'
+        html: dist + '/',
+        css: dist + '/css/',
+        js: dist + '/js/',
+        img: dist +'/img/',
+        fonts: dist + '/fonts/'
     },
     src: {
         html: source + '/',
@@ -22,16 +22,17 @@ let path = {
         js: source + '/**/*.js',
         img: source +'/img/*.{jpg, png, svg, webp}'
     },
-    clean: './' + production + '/'
+    clean: './' + dist + '/'
 }
 
 let gulp = require('gulp'),
-    browsersync = require('browser-sync').create()
+    browsersync = require('browser-sync').create(),
+    pug = require('pug')
 
 function browserSync() {
     browsersync.init({
         server: {
-            baseDir: './' + production + '/'    
+            baseDir: './' + dist + '/'    
         },
         port: 8080,
         notify: false
@@ -39,6 +40,8 @@ function browserSync() {
 }
 
 let watch = gulp.parallel(browserSync)
+
+
 
 exports.watch = watch
 exports.default = watch
