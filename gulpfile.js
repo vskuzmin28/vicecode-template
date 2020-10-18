@@ -1,61 +1,21 @@
-let dist = 'dist'
-let source = 'src'
+const gulp = require('gulp');
+const script = require('./gulp/tasks/scripts');
+const fonts = require('./gulp/tasks/fonts');
+const vendors = require('./gulp/tasks/vendorsJS');
+const imageMinify = require('./gulp/tasks/imageMinify');
+const styles = require('./gulp/tasks/styles');
+const clean = require('./gulp/tasks/clean');
+const pug2html = require('./gulp/tasks/pug');
+const spriteSVG = require('./gulp/tasks/spriteSVG');
+const serve = require('./gulp/tasks/serve');
+const spritePNG = require('./gulp/tasks/spritePNG');
+const convertFonts = require('./gulp/tasks/convertFonts');
 
-let path = {
-    dist: {
-        html: dist + '/',
-        css: dist + '/css/',
-        js: dist + '/js/',
-        img: dist +'/img/',
-        fonts: dist + '/fonts/'
-    },
-    src: {
-        html: source + '/',
-        css: source + '/scss/style.scss',
-        js: source + '/js/',
-        img: source +'/img/*.{jpg, png, svg, webp}',
-        fonts: source + '/fonts/*.ttf'
-    },
-    watch: {
-        html: dist + '/**/*.html',
-        css: dist + '/**/*.css',
-        js: dist + '/**/*.js',
-        img: dist +'/img/*.{jpg, png, svg, webp}'
-    },
-    clean: './' + dist + '/'
-}
+const dev = gulp.parallel(pug2html, script, vendors, styles, imageMinify, spriteSVG, spritePNG, fonts);
 
-let gulp = require('gulp'), 
-    browsersync = require('browser-sync').create(),
-    pug = require('gulp-pug'),
-    htmlValidator = require('gulp-w3c-html-validator')
-
-function browserSync() {
-    browsersync.init({
-        server: {
-            baseDir: './' + dist + '/'    
-        },
-        port: 3000,
-        notify: true
-    })
-}
-
-function pug2html() {
-    return gulp.src('/pages/*.pug')
-        .pipe(pug())
-        .pipe(htmlValidator())
-        .pipe(gulp.dest('/dist/'), browsersync.reload)
-        .pipe(browsersync.stream())
-}
-
-function watchSrc() {
-    gulp.watch([path.watch.html]).on('change', browsersync.reload)
-}
-
-let pugComp = gulp.series(pug2html)
-let watch = gulp.parallel(pugComp, watchSrc, browserSync)
-
-exports.pugComp = pugComp
-exports.pug2html = pug2html
-exports.watch = watch
-exports.default = watch
+exports.default = gulp.series(
+  clean,
+  convertFonts,
+  dev,
+  serve
+);

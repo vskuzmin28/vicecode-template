@@ -1,0 +1,103 @@
+@import "libs/normalize.scss";
+@import "libs/bootstrap-grid.scss";
+@import "helpers/vars";
+@import "helpers/mixins";
+@import "helpers/fonts";
+@import "helpers/sprite";
+//@include sprites($spritesheet-sprites);
+
+@import "./../pug/components/header/header.scss";
+
+html {
+	font-family: 'Open Sans', Arial, serif;
+	font-size: 16px;
+	height: 100%;
+}
+
+body {
+	height: 100%;
+	scroll-behavior: smooth;
+	text-rendering: optimizeSpeed;
+	line-height: 1.5;
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+	margin: 0;
+	padding: 0;
+	font-weight: normal;
+	color: #fff;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+img {
+	max-width: 100%;
+	display: block;
+}
+
+input,
+button,
+textarea,
+select { font: inherit; }
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video,
+textarea { vertical-align: middle; }
+
+textarea { resize: none; }
+
+section { position: relative; }
+
+input,
+select,
+button { outline: none; }
+
+// main
+
+.main {
+	$p: &;
+
+	padding: 30px 0 125px;
+	background: url('../images/bg-main.jpg') no-repeat center;
+	background-size: cover;
+
+	&__body {
+		margin-bottom: 85px;
+		padding: 67px 0 87px 91px;
+		position: relative;
+		background: $color-gray-dark;
+		border: 2px solid #303345;
+		border-radius: 17px;
+		overflow: hidden;
+		box-shadow: 0px 4px 84px rgba(0, 0, 0, 0.25), inset 0px 4px 36px rgba(0, 0, 0, 0.14);
+
+		#{$p}__pc {
+			top: 0;
+			right: 0;
+			position: absolute;
+		}
+
+		#{$p}__content {
+			width: 400px;
+		}
+
+		#{$p}__title {
+			font-family: 'Montserrat-ExtraBold';
+			font-size: 53px;
+			line-height: 64px;
+			text-transform: uppercase;
+			color: $color-white;
+		}
+
+	}
+}

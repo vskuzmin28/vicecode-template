@@ -1,0 +1,41 @@
+// BEGIN header
+
+header.header
+    .header__container.container
+        a.header__logo.logo(href="#" title="")
+            .logo__icon
+                +icon('logo')
+            .logo__content
+                | ремонт #[br] компьютеров
+        ul.header__navigation.navigation
+            li.navigation__item
+                a.navigation__link(href="#" title="")
+                    | почему мы?
+        
+            li.navigation__item
+                a.navigation__link(href="#services" title="")
+                    | услуги и цены
+
+            li.navigation__item
+                a.navigation__link(href="#" title="")
+                    | как мы работаем
+
+            li.navigation__item
+                a.navigation__link(href="#" title="")
+                    | гарантии
+
+            li.navigation__item
+                a.navigation__link(href="#" title="")
+                    | акции
+
+            li.navigation__item
+                a.navigation__link(href="#contacts" title="")
+                    | контакты
+
+        .header__buttons
+            .header__item.header__item--gray
+                +icon('map')
+            .header__item.header__item--red
+                +icon('phone')
+
+// END header
