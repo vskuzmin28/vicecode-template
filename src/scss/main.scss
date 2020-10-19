@@ -100,4 +100,25 @@ button { outline: none; }
 		}
 
 	}
+
+	&__list {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		display: flex;
+		flex-direction: row;
+	}
+
+	&__tags {
+		width: 100%;
+
+		#{$p}__words {
+			display: flex;
+			flex-direction: row;
+		}
+
+		#{$p}__item {
+			
+		}
+	}
 }
