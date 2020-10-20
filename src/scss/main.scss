@@ -62,13 +62,93 @@ input,
 select,
 button { outline: none; }
 
-// main
+.button {
+	padding: 21px 33px;
+	display: inline-flex;
+	background: $color-red;
+	border: 0;
+	border-radius: 4px;
+	outline: none;
+	cursor: pointer;
+	font-family: 'Montserrat-SemiBold';
+	font-size: 15px;
+	text-transform: uppercase;
+	color: $color-white;
+	transition: $transition-base;
+
+	&:hover {
+		background: $color-red-light;
+	}
+}
+
+.input {
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+	font-family: 'Montserrat-SemiBold';
+	font-size: 14px;
+	color: $color-white;
+	background: 0;
+	border: 0;
+	border-bottom: 4px solid rgba($color: $color-white, $alpha: 0.25);
+	outline: none;
+	transition: $transition-base;
+
+	&:hover,
+	&:focus {
+		border-color: $color-red;
+	}
+
+	&::placeholder {
+		color: $color-white;
+		opacity: 1;
+	  }
+	  
+	&:-ms-input-placeholder {
+		color: $color-white;
+	}
+	  
+	&::-ms-input-placeholder {
+		color:$color-white;
+	}
+}
+
+.block-head {
+	top: 0;
+	position: absolute;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+
+	&__body {
+		margin-left: -30px;
+		width: 85px;
+		height: 85px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: $color-gray-dark;
+		border: 8px solid $color-gray-darked;
+		border-radius: 50%;
+	}
+
+	&__icon {
+		width: 37px;
+		height: 37px;
+		transform: translateZ(0);
+	}
+}
+
+.container {
+	position: relative;
+}
+
+// MAIN
 
 .main {
 	$p: &;
 
 	padding: 30px 0 125px;
-	background: url('../images/bg-main.jpg') no-repeat center;
+	background: url('../images/bg-main.png') no-repeat center;
 	background-size: cover;
 
 	&__body {
@@ -82,7 +162,7 @@ button { outline: none; }
 		box-shadow: 0px 4px 84px rgba(0, 0, 0, 0.25), inset 0px 4px 36px rgba(0, 0, 0, 0.14);
 
 		#{$p}__pc {
-			top: 0;
+			bottom: 0;
 			right: 0;
 			position: absolute;
 		}
@@ -99,6 +179,299 @@ button { outline: none; }
 			color: $color-white;
 		}
 
+		#{$p}__desc {
+			margin-top: 10px;
+			font-family: 'Montserrat-Regular';
+			font-size: 19px;
+
+			span {
+				font-family: 'Montserrat-SemiBold';
+			}
+		}
+
+		#{$p}__form {
+			margin-top: 43px;
+			display: flex;
+			align-items: flex-end;
+		}
+
+		#{$p}__input {
+			width: 24%;
+		}
+
+		#{$p}__button {
+			margin-left: 30px;
+		}
+
+		#{$p}__text {
+			margin-top: 14px;
+			font-family: 'Montserrat-Regular';
+			font-size: 11px;
+			color: rgba($color: $color-white, $alpha: 0.4);
+		}
+	}
+
+	&__list {
+		margin: 0 0 84px 0;
+		padding: 0;
+		list-style: none;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+
+		#{$p}__item {
+			position: relative;
+			width: 25%;
+
+			&:hover {
+				#{$p}__icon {
+					background: $color-white;
+					box-shadow: none;
+
+					svg {
+						fill: $color-red;
+					}
+				}
+			}
+
+			&:last-child {
+				#{$p}__icon {
+					svg {
+						width: 36px;
+					}
+				}
+			}
+		}
+
+		#{$p}__line {
+			top: 26px;
+			right: -40px;
+			position: absolute;
+			display: flex;
+			flex-direction: row;
+
+			span {
+				margin-right: 6px;
+				display: block;
+				width: 4px;
+				height: 4px;
+				background: $color-red;
+				border-radius: 50%;
+			}
+
+			&--second {
+				right: 40px;
+			}
+		}
+
+		#{$p}__icon {
+			margin-bottom: 37px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 65px;
+			height: 65px;
+			background: $color-red;
+			border-radius: 23px;
+			box-shadow: 0px 4px 44px rgba(255, 52, 52, 0.82);
+			transition: $transition-base;
+
+			svg {
+				width: 42px;
+				fill: $color-white;
+				transition: $transition-base;
+			}
+		}
+
+		#{$p}__text {
+			width: 225px;
+		}
+	}
+
+	&__tags {
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+
+		#{$p}__down {
+			margin-right: 4%;
+			width: 47px;
+			height: 47px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background: 0;
+			border: 4px dashed rgba($color: $color-white, $alpha: 0.5);
+			border-radius: 50%;
+			cursor: pointer;
+			transition: $transition-base;
+
+			&:hover {
+				background: $color-red;
+				border-color: $color-red;
+
+				#{$p}__icon {
+					svg {
+						fill: $color-white;
+					}
+				}
+			}
+		}
+
+		#{$p}__icon {
+			svg {
+				margin-top: -4px;
+				width: 20px;
+				height: 20px;
+				fill: rgba($color: $color-white, $alpha: 0.5);
+			}
+		}
+
+		#{$p}__words {
+			display: flex;
+			flex-direction: row;
+		}
+
+		#{$p}__item {
+			margin-right: 10px;
+			font-family: 'Montserrat-SemiBold';
+			font-size: 11px;
+			letter-spacing: 2px;
+			text-transform: uppercase;
+			color: rgba($color: $color-white, $alpha: 0.5);
+		}
+	}
+}
+
+// CAUSES
+
+.causes {
+	$p: &;
+
+	position: relative;
+	padding: 107px 0 185px;
+	background: url('../images/bg-causes.png') no-repeat center;
+	background-size: cover;
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	&__block-head {
+		top: -150px;
+	}
+
+	&__title {
+		margin-bottom: 95px;
+		font-family: 'Montserrat-SemiBold';
+		font-size: 40px;
+		color: $color-white;
+		text-align: center;
+	}
+
+	&__list {
+		margin: 0 0 30px 0;
+		padding: 0;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	&__item {
+		margin-bottom: 30px;
+		padding: 50px 35px 76px 60px;
+		width: 32%;
+		background: rgba($color:#303449, $alpha: 0.35);
+		border: 2px solid rgba($color:#3F435A, $alpha: 0.35);
+		border-radius: 15px;
+		transition: $transition-base;
+
+		#{$p}__title {
+			position: relative;
+			margin-bottom: 30px;
+			font-size: 21px;
+			line-height: 28px;
+			text-align: left;
+
+			#{$p}__label {
+				top: 7px;
+				left: -20px;
+				position: absolute;
+				width: 10px;
+				height: 10px;
+				background: $color-red;
+				border-radius: 50%;
+				box-shadow: 0px 0px 19px rgba(255, 52, 52, 0.95);
+			}
+		}
+
+		#{$p}__text {
+			font-family: 'Montserrat-Regular';
+			font-size: 16px;
+			line-height: 23px;
+			text-align: left;
+			color: #B7B8BE;
+		}
+
+		&:hover {
+			background: rgba($color:#161825, $alpha: 0.35);
+			border: 2px solid rgba($color:#0E0E11, $alpha: 0.35);
+		}
+
+		&--long {
+			width: 66%;
+		}
+
+		&--dark {
+			background: rgba($color:#161825, $alpha: 0.35);
+			border: 2px solid rgba($color:#0E0E11, $alpha: 0.35);
+		}
+	}
+
+	&__button {
+		margin: 0 auto;
+	}
+}
+
+// SERVICES
+
+.services {
+	$p: &;
+
+	position: relative;
+	padding: 108px 0 139px;
+	background: url('../images/bg-price.png') no-repeat center;
+	background-size: cover;
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	&__block-head {
+		top: -148px;
+	}
+
+	&__block {
+		margin-bottom: 120px;
+		text-align: center;
+
+		#{$p}__title {
+			font-family: 'Montserrat-SemiBold';
+			font-size: 40px;
+			color: $color-white;
+		}
+
+		#{$p}__desc {
+			font-family: 'Montserrat-Regular';
+			font-size: 21px;
+			color: $color-white;
+		}
 	}
 
 	&__list {
@@ -107,18 +480,30 @@ button { outline: none; }
 		list-style: none;
 		display: flex;
 		flex-direction: row;
+		justify-content: space-between;
 	}
 
-	&__tags {
-		width: 100%;
+	&__item {		
+		width: 32%;
 
-		#{$p}__words {
+		#{$p}__view {
+			margin-bottom: 20px;
+			padding: 35px;
 			display: flex;
-			flex-direction: row;
-		}
+			justify-content: center;
+			background: rgba($color: #303449, $alpha: 0.35);
+			border: 2px solid rgba($color: #3F435A, $alpha: 0.35);
+			border-radius: 15px;
 
-		#{$p}__item {
-			
+			img {
+				height: 200px;
+				transform: translateZ(0);
+			}
 		}
+	}
+
+	&__button {
+		width: 100%;
+		justify-content: center;
 	}
 }

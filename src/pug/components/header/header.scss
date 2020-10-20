@@ -14,10 +14,16 @@
     }
 
     &__logo {
-        margin: 12px 0 0 0;
+        position: relative;
+        margin: 0 0 0 -30px;
         display: flex;
         flex-direction: row;
         overflow: hidden;
+
+        img {
+            fill: $color-white;
+            zoom: 0.5;
+        }
     }
 
     &__navigation {
@@ -104,15 +110,14 @@
     text-decoration: none;
 
     &__icon {
-        svg {
-            margin: -30px 0 0 -100px;
-        }
+        transform: translateZ(0);
     }
 
     &__content {
-        margin-top: 3px;
-        margin-left: -24px;
+        margin-top: 20px;
+        margin-left: 14px;
         font-size: 12px;
+        line-height: 14px;
         display: block;
         font-family: 'Montserrat-Regular';
         color: #fff;

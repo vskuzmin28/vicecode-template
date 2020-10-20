@@ -11,12 +11,7 @@
   <body>
     <!-- BEGIN header-->
     <header class="header">
-      <div class="header__container container"><a class="header__logo logo" href="#" title="">
-          <div class="logo__icon">
-            <svg class="svg-sprite-icon icon-logo">
-              <use xlink:href="images/sprite/symbol/sprite.svg#logo"></use>
-            </svg>
-          </div>
+      <div class="header__container container"><a class="header__logo logo" href="#" title=""><img class="logo__icon" src="/images/logo.png" alt="">
           <div class="logo__content">ремонт <br> компьютеров</div></a>
         <ul class="header__navigation navigation">
           <li class="navigation__item"><a class="navigation__link" href="#" title="">почему мы?</a></li>
@@ -50,27 +45,46 @@
             <div class="main__desc"><span>с гарантией 1 год</span>, благодаря своему складу запчастей</div>
           </div>
           <form class="main__form" action="/" method="post">
-            <input type="tel" name="tel" placeholder="111">
-            <button class="button">Узнать стоимость</button>
+            <input class="main__input input" type="tel" name="tel" placeholder="Ваш телефон" required>
+            <button class="main__button button">Узнать стоимость</button>
           </form>
+          <p class="main__text">Нажимая кнопку “Узнать стоимость”, я даю согласие на обработку персональных данных</p>
         </div>
         <ul class="main__list">
           <li class="main__item">
-            <div class="main__icon"></div>
+            <div class="main__line"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+            <div class="main__icon">
+              <svg class="svg-sprite-icon icon-delivery">
+                <use xlink:href="images/sprite/symbol/sprite.svg#delivery"></use>
+              </svg>
+            </div>
             <div class="main__text">Бесплатный выезд мастера на дом  в течение 3 минут после обращения</div>
           </li>
           <li class="main__item">
-            <div class="main__icon"></div>
+            <div class="main__line main__line--second"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+            <div class="main__icon">
+              <svg class="svg-sprite-icon icon-pc">
+                <use xlink:href="images/sprite/symbol/sprite.svg#pc"></use>
+              </svg>
+            </div>
             <div class="main__text">Сертифицированные мастера устранят 93% поломок в течении часа</div>
           </li>
           <li class="main__item">
-            <div class="main__icon"></div>
+            <div class="main__icon">
+              <svg class="svg-sprite-icon icon-certificate">
+                <use xlink:href="images/sprite/symbol/sprite.svg#certificate"></use>
+              </svg>
+            </div>
             <div class="main__text">Используем оригинальные запчасти и предоставляем чек и гарантийный талон</div>
           </li>
         </ul>
         <div class="main__tags">
-          <div class="page-down">
-            <div class="page-down__icon"></div>
+          <div class="main__down">
+            <div class="main__icon">
+              <svg class="svg-sprite-icon icon-arrow-down">
+                <use xlink:href="images/sprite/symbol/sprite.svg#arrow-down"></use>
+              </svg>
+            </div>
           </div>
           <div class="main__words">
             <div class="main__item">#Замена платы</div>
@@ -85,26 +99,36 @@
     <!-- END main-->
     <!-- BEGIN causes-->
     <div class="causes">
-      <div class="container">
+      <div class="causes__container container">
+        <div class="causes__block-head block-head">
+          <div class="block-head__body"><img class="block-head__icon" src="/images/icons/icon-1.png" alt=""></div>
+        </div>
+        <div class="causes__title">Почему мы?</div>
         <div class="causes__list">
           <div class="causes__item">
             <div class="causes__icon"></div>
             <div class="causes__content">
-              <div class="causes__title">Перезвоним через 1 минуту</div>
+              <div class="causes__title">
+                <div class="causes__label"></div>Перезвоним через 1 минуту
+              </div>
               <div class="causes__text">Если Вы будете вынуждены ждать, то от нас бонус или скидка</div>
             </div>
           </div>
-          <div class="causes__item">
+          <div class="causes__item causes__item--long causes__item--dark">
             <div class="causes__icon"></div>
             <div class="causes__content">
-              <div class="causes__title">Открытая ценовая политика</div>
+              <div class="causes__title">
+                <div class="causes__label"></div>Открытая ценовая политика
+              </div>
               <div class="causes__text">Разнообразный и богатый опыт начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке соответствующий условий активизации. </div>
             </div>
           </div>
-          <div class="causes__item">
+          <div class="causes__item causes__item--dark">
             <div class="causes__icon"></div>
             <div class="causes__content">
-              <div class="causes__title">Бесплатный выезд и диагностика</div>
+              <div class="causes__title">
+                <div class="causes__label"></div>Бесплатный выезд и диагностика
+              </div>
               <div class="causes__text">Значимость этих проблем настолько очевидна, что постоянный </div>
             </div>
           </div>
@@ -115,37 +139,42 @@
               <div class="causes__text">Товарищи! Консультация с широким активом представляет собой</div>
             </div>
           </div>
-          <div class="causes__item">
+          <div class="causes__item causes__item--dark">
             <div class="causes__icon"></div>
             <div class="causes__content">
-              <div class="causes__title">Ремонт в удобное для Вас время</div>
+              <div class="causes__title">
+                <div class="causes__label"></div>Ремонт в удобное для Вас время
+              </div>
               <div class="causes__text">Сфера нашей активности требуют от нас анализа новых предложений. Задача организации, в особенности</div>
             </div>
           </div>
         </div>
-        <div class="causes__button">Узнать стоимость ремонта</div>
+        <div class="causes__button button">Узнать стоимость ремонта</div>
       </div>
     </div>
     <!-- END causes-->
     <!-- BEGIN services-->
     <div class="services">
-      <div class="container">
+      <div class="services__ container">
+        <div class="services__block-head block-head">
+          <div class="block-head__body"><img class="block-head__icon" src="/images/icons/icon-2.png" alt=""></div>
+        </div>
         <div class="services__block">
-          <div class="services__title"></div>
-          <div class="services__desc"></div>
+          <div class="services__title">Услуги и цены</div>
+          <div class="services__desc">Выберите тип устройства</div>
         </div>
         <div class="services__list">
           <div class="services__item">
-            <div class="services__view"><img class="services__image" src="" alt="@@"></div>
-            <div class="services__button">Ноутбук msi</div>
+            <div class="services__view"><img class="services__image" src="/images/notebook.png" alt="@@"></div>
+            <div class="services__button button">Ноутбук msi</div>
           </div>
           <div class="services__item">
-            <div class="services__view"><img class="services__image" src="" alt="@@"></div>
-            <div class="services__button">Компьютер msi</div>
+            <div class="services__view"><img class="services__image" src="/images/pc.png" alt="@@"></div>
+            <div class="services__button button">Компьютер msi</div>
           </div>
           <div class="services__item">
-            <div class="services__view"><img class="services__image" src="" alt="@@"></div>
-            <div class="services__button">моноблок msi</div>
+            <div class="services__view"><img class="services__image" src="/images/mono.png" alt="@@"></div>
+            <div class="services__button button">моноблок msi</div>
           </div>
         </div>
       </div>
@@ -311,7 +340,7 @@
     </footer>
     <!-- END footer-->
     <!--script(src="js/vendor/jquery-3.3.1.min.js")-->
-    <!--script(src="js/vendor/libs.js")-->
+    <script src="js/libs/vendor.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

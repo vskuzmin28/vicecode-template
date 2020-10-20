@@ -18,27 +18,47 @@ block content
 						| #[span с гарантией 1 год], благодаря своему складу запчастей
 
 				form.main__form(action="/" method="post")
-					input(type="tel" name="tel" placeholder="111")
-					button.button
+					input.main__input.input(type="tel" name="tel" placeholder="Ваш телефон" required)
+					button.main__button.button
 						| Узнать стоимость
+				p.main__text
+					| Нажимая кнопку “Узнать стоимость”, я даю согласие на обработку персональных данных
 
 			ul.main__list
 				li.main__item
+					.main__line
+						span
+						span
+						span
+						span
+						span
+						span
 					.main__icon
+						+icon('delivery')
 					.main__text
 						| Бесплатный выезд мастера на дом  в течение 3 минут после обращения
 				li.main__item
+					.main__line.main__line--second
+							span
+							span
+							span
+							span
+							span
+							span
 					.main__icon
+						+icon('pc')
 					.main__text
 						| Сертифицированные мастера устранят 93% поломок в течении часа
 				li.main__item
 					.main__icon
+						+icon('certificate')
 					.main__text
 						| Используем оригинальные запчасти и предоставляем чек и гарантийный талон
 
 			.main__tags
-				.page-down
-					.page-down__icon
+				.main__down
+					.main__icon
+						+icon('arrow-down')
 				.main__words
 					.main__item
 						| #Замена платы
@@ -60,28 +80,36 @@ block content
 	// BEGIN causes
 
 	.causes
-		.container
+		.causes__container.container
+			.causes__block-head.block-head
+				.block-head__body
+					img.block-head__icon(src="/images/icons/icon-1.png" alt="")
+			.causes__title
+				| Почему мы?
 			.causes__list
 				.causes__item
 					.causes__icon
 					.causes__content
 						.causes__title
+							.causes__label
 							| Перезвоним через 1 минуту
 						.causes__text
 							| Если Вы будете вынуждены ждать, то от нас бонус или скидка
 
-				.causes__item
+				.causes__item.causes__item--long.causes__item--dark
 					.causes__icon
 					.causes__content
 						.causes__title
+							.causes__label
 							| Открытая ценовая политика
 						.causes__text
 							| Разнообразный и богатый опыт начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке соответствующий условий активизации. 
 
-				.causes__item
+				.causes__item.causes__item--dark
 					.causes__icon
 					.causes__content
 						.causes__title
+							.causes__label
 							| Бесплатный выезд и диагностика
 						.causes__text
 							| Значимость этих проблем настолько очевидна, что постоянный 
@@ -94,15 +122,16 @@ block content
 						.causes__text
 							| Товарищи! Консультация с широким активом представляет собой
 
-				.causes__item
+				.causes__item.causes__item--dark
 					.causes__icon
 					.causes__content
 						.causes__title
+							.causes__label
 							| Ремонт в удобное для Вас время
 						.causes__text
 							| Сфера нашей активности требуют от нас анализа новых предложений. Задача организации, в особенности
 
-			.causes__button
+			.causes__button.button
 				| Узнать стоимость ремонта
 
 	// END causes
@@ -110,28 +139,33 @@ block content
 	// BEGIN services
 
 	.services
-		.container
+		.services__.container
+			.services__block-head.block-head
+				.block-head__body
+					img.block-head__icon(src="/images/icons/icon-2.png" alt="")
 			.services__block
 				.services__title
+					| Услуги и цены
 				.services__desc
+					| Выберите тип устройства
 			
 			.services__list
 				.services__item
 					.services__view
-						img.services__image(src="" alt="@@")
-					.services__button
+						img.services__image(src="/images/notebook.png" alt="@@")
+					.services__button.button
 						| Ноутбук msi
 
 				.services__item
 					.services__view
-						img.services__image(src="" alt="@@")
-					.services__button
+						img.services__image(src="/images/pc.png" alt="@@")
+					.services__button.button
 						| Компьютер msi
 
 				.services__item
 					.services__view
-						img.services__image(src="" alt="@@")
-					.services__button
+						img.services__image(src="/images/mono.png" alt="@@")
+					.services__button.button
 						| моноблок msi
 
 
