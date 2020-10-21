@@ -183,7 +183,7 @@ block content
 						| #[span.warranty__text--bold с гарантией 1 год], благодаря своему складу запчастей
 					.warranty__text
 						| благодаря своему #[br] складу запчастей
-				.warranty__button
+				.warranty__button.button
 					| Заказать ремонт
 
 	// END warranty
@@ -277,9 +277,9 @@ block content
 			.warranty__body
 				.warranty__title
 					| Гарантия до 365 дней #[br] на ремонт и запчасти
-				.warranty__text
+				.warranty__text.warranty__text--full
 					| Мы предоставляем полную гарантию на производственный ремонт и комплектующие. Работаем на свою репутацию и ваши рекомендации!
-				.warranty__button
+				.warranty__button.button
 					| Заказать ремонт
 
 	// END warranty
@@ -311,31 +311,38 @@ block content
 
 	.contacts
 		.container
-			.contaier__icon
+			.contacts__block-head.block-head
+				.block-head__body
+					img.block-head__icon(src="/images/icons/icon-6.png" alt="")
 			.contacts__title
+				| Контакты
 			ul.contacts__list
 				li.contacts__item
 					.contacts__icon
+						+icon('phone')
 					.contacts__content
 						.contacts__title
-							| 8 800 555 35 35
+							| +71111111111
 						.contacts__text
 							| Бесплатная круглосуточная консультация
 
 				li.contacts__item
 					.contacts__icon
+						+icon('time')
 					.contacts__content
 						.contacts__text
 							| Выезд на ремонт Пн-Вс: #[br] #[span.contacts__text--bold с 10:00 до 22:00]
 
 				li.contacts__item
 					.contacts__icon
+						+icon('delivery')
 					.contacts__content
 						.contacts__text
 							| Выезд мастера по городу и  до 40 км от #[br] границы города - #[span.contacts__text--bold бесплатно]
 
 				li.contacts__item
 					.contacts__icon
+						+icon('box')
 					.contacts__content
 						.contacts__text
 							| Доставка компьютера в сервисный центр #[br] и обратно
