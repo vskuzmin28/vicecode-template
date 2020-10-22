@@ -14,8 +14,8 @@ module.exports = function serve(cb) {
   server.init({
     server: 'dist',
     notify: false,
-    open: true,
-    cors: true
+    open: false,
+    cors: false,
   });
 
   gulp.watch('src/images/*/*.{gif,png,jpg,svg,webp}', gulp.series(imageMinify)).on('change', server.reload);

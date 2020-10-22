@@ -34,6 +34,10 @@
         .navigation__item {
             margin-left: 28px;
             height: 70px;
+
+            @media (max-width: 1199px) {
+				margin-left: 20px;
+			}
         }
 
         .navigation__link {
@@ -50,6 +54,10 @@
             &:hover {
                 color: $color-red;
             }
+        }
+
+        @media (max-width: 992px) {
+            display: none;       
         }
     }
 
@@ -121,5 +129,9 @@
         display: block;
         font-family: 'Montserrat-Regular';
         color: #fff;
+
+        @media (max-width: 1199px) {
+            display: none;
+        }
     }
 }

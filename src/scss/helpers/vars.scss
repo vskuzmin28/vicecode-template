@@ -9,14 +9,12 @@ $color-gray-dark: #242739;
 $color-gray-darked: #0D0F1D;
 
 // Sizes
-$base-font-size: 16px;
+$tablet: 768px;
+$large: 1024px;
+$desktop: 1280px;
 
-$tablet: 768;
-$large: 1024;
-$desktop: 1280;
 
-$content: 1000px;
+// Animation
+$transition-base: all 0.25s ease-out;
 
 // Fonts
-
-$transition-base: all 0.25s ease-out;

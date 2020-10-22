@@ -26,3 +26,9 @@ $units: 1px !default;
     @content;
   }
 }
+
+@mixin large {
+	@media (max-width: (1024px)) {
+		@content;
+	}
+}
