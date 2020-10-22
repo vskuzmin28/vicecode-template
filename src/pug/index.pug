@@ -36,7 +36,7 @@ block content
 					.main__icon
 						+icon('delivery')
 					.main__text
-						| Бесплатный выезд мастера на дом  в течение 3 минут после обращения
+						| Мастер бесплатно отправится к вам уже через 3 минуты после обращения
 				li.main__item
 					.main__line.main__line--second
 							span
@@ -48,12 +48,12 @@ block content
 					.main__icon
 						+icon('pc')
 					.main__text
-						| Сертифицированные мастера устранят 93% поломок в течении часа
+						| 93% неполадок наши квалифицированные мастера устраняют в течение часа
 				li.main__item
 					.main__icon
 						+icon('certificate')
 					.main__text
-						| Используем оригинальные запчасти и предоставляем чек и гарантийный талон
+						| Мы устанавливаем оригинальные комплектующие и предоставляем клиенту чек и гарантийный талон
 
 			.main__tags
 				.main__down
@@ -94,7 +94,7 @@ block content
 							.causes__label
 							| Перезвоним через 1 минуту
 						.causes__text
-							| Если Вы будете вынуждены ждать, то от нас бонус или скидка
+							| Если вам придется ждать дольше, подарим бонус или скидку
 
 				.causes__item.causes__item--long.causes__item--dark
 					.causes__icon
@@ -103,7 +103,7 @@ block content
 							.causes__label
 							| Открытая ценовая политика
 						.causes__text
-							| Разнообразный и богатый опыт начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке соответствующий условий активизации. 
+							| Стоимость ремонта обсуждается с клиентом заранее, никаких доплат, все абсолютно прозрачно
 
 				.causes__item.causes__item--dark
 					.causes__icon
@@ -112,15 +112,16 @@ block content
 							.causes__label
 							| Бесплатный выезд и диагностика
 						.causes__text
-							| Значимость этих проблем настолько очевидна, что постоянный 
+							| Вам не придется отдельно платить за выезд мастера и проведение диагностики
 
 				.causes__item
 					.causes__icon
 					.causes__content
 						.causes__title
+							.causes__label
 							| 10 лет на рынке компьютерных услуг
 						.causes__text
-							| Товарищи! Консультация с широким активом представляет собой
+							| Квалификация наших мастеров подтверждена огромных опытом в сфере компьютерных услуг
 
 				.causes__item.causes__item--dark
 					.causes__icon
@@ -129,7 +130,7 @@ block content
 							.causes__label
 							| Ремонт в удобное для Вас время
 						.causes__text
-							| Сфера нашей активности требуют от нас анализа новых предложений. Задача организации, в особенности
+							| Мы работаем без выходных и готовы выполнить ремонт с 10 утра до 10 вечера
 
 			.causes__button.button
 				| Узнать стоимость ремонта
@@ -177,7 +178,7 @@ block content
 		.container
 			.warranty__body
 				.warranty__title
-					| Ремонт MSI #[br] с гарантией 1 год
+					| Ремонт MSI #[br] с гарантией #[span.shadow--first 1 год]
 				.warranty__field
 					.warranty__text
 						| #[span.warranty__text--bold с гарантией 1 год], благодаря своему складу запчастей
@@ -193,21 +194,34 @@ block content
 	.master
 		.container
 			.master__head
-				img.master__avatar(src="" alt="")
+				img.master__avatar(src="/images/masters/master-1.png" alt="")
+			.master__info
 				.master__name
 					| Василий Юрьев
 				.master__desc
 					| главный мастер
 			.master__quote
-				| Не обязательно платить много за ремонт техники MSI, не смотря на то, что она считается премиальной. Политика нашего сервиса такова, что идейные соображения высшего порядка, а также консультация с широким активом в значительной степени обуславливает создание соответствующий условий активизации. Товарищи! постоянное информационно-пропагандистское обеспечение нашей деятельности представляет собой интересный эксперимент проверки систем массового участия. 
+				| Техника MSI считается надежной, но и она иногда выходит из строя. Если такое произошло с вашим устройством, вы можете рассчитывать на нашу помощь. В сервисном центре «ProMSI remont» починят ваш девайс, даже если он требует серьезного ремонта. На нашем складе всегда есть в наличии оригинальные запчасти практически для любой модели техники MSI, поэтому для ремонта потребуется минимум времени и затрат.
 			.master__footer
-				.masters__persons
-					img.masters__item(src="" alt="")
-					img.masters__item(src="" alt="")
-					img.masters__item(src="" alt="")
-					img.masters__item(src="" alt="")
-					img.masters__item(src="" alt="")
-					img.masters__item(src="" alt="")
+				.master__persons
+					.master__list
+						img.master__item(src="/images/masters/master-2.png" alt="")
+						img.master__item(src="/images/masters/master-3.png" alt="")
+						img.master__item(src="/images/masters/master-4.png" alt="")
+						img.master__item(src="/images/masters/master-5.png" alt="")
+						img.master__item(src="/images/masters/master-6.png" alt="")
+						img.master__item(src="/images/masters/master-7.png" alt="")
+						.master__icon
+							+icon('arrow')
+					.master__text
+						| Наши специалисты сделают все качественно, ведь они сертифицированные профессионалы своего дела и имеют опыт в среднем от 5 лет
+				.master__desc
+					.master__title
+						| Только проверенные специалисты
+					.master__text
+						| Закажите ремонт сейчас #[br] и получите скидку 15%
+					.master__button.button
+						| Заказать ремонт
 				
 
 	// END master
@@ -215,57 +229,96 @@ block content
 	// BEGIN stages
 
 	.stages
-		.container
+		.stages__container.container
+			.stages__block-head.block-head
+				.block-head__body
+					img.block-head__icon(src="/images/icons/icon-3.png" alt="")
+			.stages__title
+				| Как мы работаем
 			.stages__list
 				.stages__item
+					.stages__line.stages__line--first
+						span
+						span
+						span
+						span
+						span
+						span
 					.stages__status
+						.circle.circle--first
 						| 1
 					.stages__title
 						| Заявка на сайте
 					.stages__text
-						| Значимость этих проблем настолько очевидна, что постоянный 
+						| Вы оставляете заявку, оператор перезванивает и подтверждает заказ.
 
 				.stages__item
+					.stages__line.stages__line--first
+						span
+						span
+						span
+						span
+						span
+						span
 					.stages__status
+						.circle.circle--second
 						| 2
 					.stages__title
 						| Выезд мастера
 					.stages__text
-						| Значимость этих проблем настолько очевидна, что постоянный 
+						| Мастер направляется по указанному вами адресу.
 
 				.stages__item
 					.stages__status
+						.circle.circle--third
 						| 3
 					.stages__title
 						| Диагностика
 					.stages__text
-						| Значимость этих проблем настолько очевидна, что постоянный 
+						| Специалист проводит полную диагностику устройства.
 
 				.stages__item
+					.stages__line.stages__line--first
+						span
+						span
+						span
+						span
+						span
+						span
 					.stages__status
+						.circle.circle--second
 						| 4
 					.stages__title
 						| Согласование
 					.stages__text
-						| Значимость этих проблем настолько очевидна, что постоянный 
+						| Стоимость ремонта, срок и гарантийные условия согласовываются с клиентом.
 
 				.stages__item
+					.stages__line.stages__line--first
+						span
+						span
+						span
+						span
+						span
+						span
 					.stages__status
+						.circle.circle--fourth
 						| 5
 					.stages__title
 						| Ремонт устройства
 					.stages__text
-						| Значимость этих проблем настолько очевидна, что постоянный 
+						| Мастер производит необходимый ремонт или замену неисправных комплектующих.
 
 				.stages__item
 					.stages__status
+						.circle.circle--first
 						| 6
 					.stages__title
 						| Выдача и гарантия
 					.stages__text
-						| Значимость этих проблем настолько очевидна, что постоянный
+						| По завершении ремонта вы получаете исправный девайс и гарантию на фирменном бланке.
 			
-			.stages__button
+			.stages__button.button
 				| Узнать стоимость ремонта
 
 	// END stages
@@ -276,7 +329,7 @@ block content
 		.container
 			.warranty__body
 				.warranty__title
-					| Гарантия до 365 дней #[br] на ремонт и запчасти
+					| Гарантия до #[span.shadow--second 365 дней] #[br] на ремонт и запчасти
 				.warranty__text.warranty__text--full
 					| Мы предоставляем полную гарантию на производственный ремонт и комплектующие. Работаем на свою репутацию и ваши рекомендации!
 				.warranty__button.button
@@ -288,21 +341,28 @@ block content
 
 	.options
 		.container
-			.contaier__icon
-			.contacts__title
-			.contacts__list
-				.contacts__item
-					.contacts__icon
-					.contacts__title
+			.options__block-head.block-head
+				.block-head__body
+					img.block-head__icon(src="/images/icons/icon-4.png" alt="")
+			.options__title
+				| Пришло время выбрать
+			.options__list
+				.options__item
+					.options__block-head.block-head
+						.block-head__body.block-head__body--red
+							img.block-head__icon(src="/images/icons/icon-5.png" alt="")
+					.options__title
 						| Бесплатный антивирус
-					.contacts__button
+					.options__button.button
 						| Выбираю антивирус
 
-				.contacts__item
-					.contacts__icon
-					.contacts__title
+				.options__item
+					.options__block-head.block-head
+						.block-head__body.block-head__body--blue
+							img.block-head__icon(src="/images/icons/icon-5.png" alt="")
+					.options__title
 						| Скидка 20% на ремонт
-					.contacts__button
+					.options__button.button
 						| Выбираю скидку
 
 	// END options
@@ -310,7 +370,7 @@ block content
 	// BEGIN contacts
 
 	.contacts
-		.container
+		.contacts__container.container
 			.contacts__block-head.block-head
 				.block-head__body
 					img.block-head__icon(src="/images/icons/icon-6.png" alt="")
@@ -321,7 +381,7 @@ block content
 					.contacts__icon
 						+icon('phone')
 					.contacts__content
-						.contacts__title
+						a.contacts__title(href="tel:+71111111111" title="")
 							| +71111111111
 						.contacts__text
 							| Бесплатная круглосуточная консультация
@@ -357,8 +417,10 @@ block content
 				| Оставьте заявку сейчас и получите бесплатную консультацию и скидку 15% на ремонт
 			.feedback__form(action="/" method="post")
 				.feedback__field
-					input(type="text" name="name" placeholder="Ваше имя")
-					input(type="tel" name="tel" placeholder="Ваш телефон")
+					input.feedback__input.input(type="text" name="name" placeholder="Ваше имя")
+					input.feedback__input.input(type="tel" name="tel" placeholder="Ваш телефон" required)
+					button.feedback__button.button
+						| оставить заявку
 				.feedback__text
 					| Нажимая кнопку “Оставить заявку”, я даю согласие на обработку персональных данных
 
@@ -367,9 +429,9 @@ block content
 	// BEGIN footer
 
 	footer.footer
-		.container
-			.logo
-				.logo__icon
+		.footer__container.container
+			a.footer__logo.logo(href="#" title="")
+				img.logo__icon(src="/images/logo-footer.png" alt="")
 				.logo__content
 					| ремонт #[br] компьютеров
 
@@ -380,6 +442,6 @@ block content
 				| Цены на сайте не являются публичной офертой
 
 			a.page-up(href="#" title="")
-				.page-up__icon
+				+icon('arrow-up')
 
 	// END footer
