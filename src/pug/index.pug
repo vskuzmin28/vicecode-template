@@ -7,7 +7,7 @@ block content
 
 	// BEGIN main
 
-	.main
+	#main.main
 		.container
 			.main__body
 				img.main__pc(src="/images/main-pc.png" alt="")
@@ -56,7 +56,7 @@ block content
 						| Мы устанавливаем оригинальные комплектующие и предоставляем клиенту чек и гарантийный талон
 
 			.main__tags
-				.main__down
+				a.main__down(href="#causes" title="")
 					.main__icon
 						+icon('arrow-down')
 				.main__words
@@ -79,7 +79,7 @@ block content
 
 	// BEGIN causes
 
-	.causes
+	#causes.causes
 		.causes__container.container
 			.causes__block-head.block-head
 				.block-head__body
@@ -139,7 +139,7 @@ block content
 
 	// BEGIN services
 
-	.services
+	#services.services
 		.services__.container
 			.services__block-head.block-head
 				.block-head__body
@@ -174,7 +174,7 @@ block content
 
 	// BEGIN warranty
 
-	.warranty.warranty--msi
+	#warranty.warranty.warranty--msi
 		.container
 			.warranty__body
 				.warranty__title
@@ -228,7 +228,7 @@ block content
 
 	// BEGIN stages
 
-	.stages
+	#stages.stages
 		.stages__container.container
 			.stages__block-head.block-head
 				.block-head__body
@@ -369,7 +369,7 @@ block content
 
 	// BEGIN contacts
 
-	.contacts
+	#contacts.contacts
 		.contacts__container.container
 			.contacts__block-head.block-head
 				.block-head__body
@@ -441,7 +441,7 @@ block content
 			p.footer__text(href="#" title="")
 				| Цены на сайте не являются публичной офертой
 
-			a.page-up(href="#" title="")
+			a.page-up(href="#main" title="")
 				+icon('arrow-up')
 
 	// END footer

@@ -13,11 +13,10 @@
       <div class="header__container container"><a class="header__logo logo" href="#" title=""><img class="logo__icon" src="/images/logo.png" alt="">
           <div class="logo__content">ремонт <br> компьютеров</div></a>
         <ul class="header__navigation navigation">
-          <li class="navigation__item"><a class="navigation__link" href="#" title="">почему мы?</a></li>
+          <li class="navigation__item"><a class="navigation__link" href="#causes" title="">почему мы?</a></li>
           <li class="navigation__item"><a class="navigation__link" href="#services" title="">услуги и цены</a></li>
-          <li class="navigation__item"><a class="navigation__link" href="#" title="">как мы работаем</a></li>
-          <li class="navigation__item"><a class="navigation__link" href="#" title="">гарантии</a></li>
-          <li class="navigation__item"><a class="navigation__link" href="#" title="">акции</a></li>
+          <li class="navigation__item"><a class="navigation__link" href="#stages" title="">как мы работаем</a></li>
+          <li class="navigation__item"><a class="navigation__link" href="#warranty" title="">гарантии</a></li>
           <li class="navigation__item"><a class="navigation__link" href="#contacts" title="">контакты</a></li>
         </ul>
         <div class="header__buttons">
@@ -31,12 +30,24 @@
               <use xlink:href="images/sprite/symbol/sprite.svg#phone"></use>
             </svg>
           </div>
+          <div class="header__item header__item--red menu">
+            <div class="menu__default">
+              <svg class="svg-sprite-icon icon-menu">
+                <use xlink:href="images/sprite/symbol/sprite.svg#menu"></use>
+              </svg>
+            </div>
+            <div class="menu__active is-hidden">
+              <svg class="svg-sprite-icon icon-close">
+                <use xlink:href="images/sprite/symbol/sprite.svg#close"></use>
+              </svg>
+            </div>
+          </div>
         </div>
       </div>
     </header>
     <!-- END header-->
     <!-- BEGIN main-->
-    <div class="main">
+    <div class="main" id="main">
       <div class="container">
         <div class="main__body"><img class="main__pc" src="/images/main-pc.png" alt="">
           <div class="main__content">
@@ -77,14 +88,12 @@
             <div class="main__text">Мы устанавливаем оригинальные комплектующие и предоставляем клиенту чек и гарантийный талон</div>
           </li>
         </ul>
-        <div class="main__tags">
-          <div class="main__down">
+        <div class="main__tags"><a class="main__down" href="#causes" title="">
             <div class="main__icon">
               <svg class="svg-sprite-icon icon-arrow-down">
                 <use xlink:href="images/sprite/symbol/sprite.svg#arrow-down"></use>
               </svg>
-            </div>
-          </div>
+            </div></a>
           <div class="main__words">
             <div class="main__item">#Замена платы</div>
             <div class="main__item">#чистка компьютера</div>
@@ -97,7 +106,7 @@
     </div>
     <!-- END main-->
     <!-- BEGIN causes-->
-    <div class="causes">
+    <div class="causes" id="causes">
       <div class="causes__container container">
         <div class="causes__block-head block-head">
           <div class="block-head__body"><img class="block-head__icon" src="/images/icons/icon-1.png" alt=""></div>
@@ -155,7 +164,7 @@
     </div>
     <!-- END causes-->
     <!-- BEGIN services-->
-    <div class="services">
+    <div class="services" id="services">
       <div class="services__ container">
         <div class="services__block-head block-head">
           <div class="block-head__body"><img class="block-head__icon" src="/images/icons/icon-2.png" alt=""></div>
@@ -182,7 +191,7 @@
     </div>
     <!-- END services-->
     <!-- BEGIN warranty-->
-    <div class="warranty warranty--msi">
+    <div class="warranty warranty--msi" id="warranty">
       <div class="container">
         <div class="warranty__body">
           <div class="warranty__title">Ремонт MSI <br> с гарантией <span class="shadow--first">1 год</span></div>
@@ -225,7 +234,7 @@
     </div>
     <!-- END master-->
     <!-- BEGIN stages-->
-    <div class="stages">
+    <div class="stages" id="stages">
       <div class="stages__container container">
         <div class="stages__block-head block-head">
           <div class="block-head__body"><img class="block-head__icon" src="/images/icons/icon-3.png" alt=""></div>
@@ -321,7 +330,7 @@
     </div>
     <!-- END options-->
     <!-- BEGIN contacts-->
-    <div class="contacts">
+    <div class="contacts" id="contacts">
       <div class="contacts__container container">
         <div class="contacts__block-head block-head">
           <div class="block-head__body"><img class="block-head__icon" src="/images/icons/icon-6.png" alt=""></div>
@@ -391,15 +400,14 @@
     <footer class="footer">
       <div class="footer__container container"><a class="footer__logo logo" href="#" title=""><img class="logo__icon" src="/images/logo-footer.png" alt="">
           <div class="logo__content">ремонт <br> компьютеров</div></a><a class="footer__link" href="#" title="">Политика конфиденциальности</a>
-        <p class="footer__text" href="#" title="">Цены на сайте не являются публичной офертой</p><a class="page-up" href="#" title="">
+        <p class="footer__text" href="#" title="">Цены на сайте не являются публичной офертой</p><a class="page-up" href="#main" title="">
           <svg class="svg-sprite-icon icon-arrow-up">
             <use xlink:href="images/sprite/symbol/sprite.svg#arrow-up"></use>
           </svg></a>
       </div>
     </footer>
     <!-- END footer-->
-    <script src="js/libs/vendor.js"></script>
-    <script src="js/libs/svg4everybody.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="/js/libs.js"></script>
+    <script src="/js/main.js"></script>
   </body>
 </html>

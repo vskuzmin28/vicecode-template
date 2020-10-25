@@ -8,7 +8,7 @@ header.header
                 | ремонт #[br] компьютеров
         ul.header__navigation.navigation
             li.navigation__item
-                a.navigation__link(href="#" title="")
+                a.navigation__link(href="#causes" title="")
                     | почему мы?
         
             li.navigation__item
@@ -16,16 +16,16 @@ header.header
                     | услуги и цены
 
             li.navigation__item
-                a.navigation__link(href="#" title="")
+                a.navigation__link(href="#stages" title="")
                     | как мы работаем
 
             li.navigation__item
-                a.navigation__link(href="#" title="")
+                a.navigation__link(href="#warranty" title="")
                     | гарантии
 
-            li.navigation__item
-                a.navigation__link(href="#" title="")
-                    | акции
+            //- li.navigation__item
+            //-     a.navigation__link(href="#" title="")
+            //-         | акции
 
             li.navigation__item
                 a.navigation__link(href="#contacts" title="")
@@ -36,5 +36,9 @@ header.header
                 +icon('map')
             .header__item.header__item--red
                 +icon('phone')
-
+            .header__item.header__item--red.menu
+                .menu__default
+                    +icon('menu')
+                .menu__active.is-hidden
+                    +icon('close')
 // END header

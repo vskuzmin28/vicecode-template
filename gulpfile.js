@@ -8,10 +8,9 @@ const clean = require('./gulp/tasks/clean');
 const pug2html = require('./gulp/tasks/pug');
 const spriteSVG = require('./gulp/tasks/spriteSVG');
 const serve = require('./gulp/tasks/serve');
-const spritePNG = require('./gulp/tasks/spritePNG');
 const convertFonts = require('./gulp/tasks/convertFonts');
 
-const dev = gulp.parallel(pug2html, script, vendors, styles, imageMinify, spriteSVG, spritePNG, fonts, convertFonts);
+const dev = gulp.parallel(pug2html, script, vendors, styles, imageMinify, spriteSVG, fonts, convertFonts);
 
 exports.default = gulp.series(
   clean,
