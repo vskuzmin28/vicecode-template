@@ -4,6 +4,6 @@ const surge = require('gulp-surge')
 module.exports = function deploy() {
   return surge({
     project: './dist/',
-    domain: 'vskuzmin28.surge.sh'
+    domain: '13-1-pro-msi.surge.sh'
   })
 };

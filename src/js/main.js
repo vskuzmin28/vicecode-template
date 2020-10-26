@@ -36,6 +36,16 @@ $('.navigation__link').on('click', (e) => {
     $('.navigation').toggleClass('is-visible')
 })
 
-$('#repairNotebook').on('shown.bs.modal', function () {
-    $('#repairNotebook').trigger('focus')
+$('.header__item--phone').on('click', () => {
+    $('.phone-content').toggleClass('is-hidden')
+    $('.dropdown').addClass('is-hidden')
+})
+
+$('.header__item--dropdown').on('click', () => {
+    $('.dropdown').toggleClass('is-hidden')
+    $('.phone-content').addClass('is-hidden')
+})
+
+$('.dropdown__link').on('click', (e) => {
+    $(e.currentTarget).addClass('dropdown__link--active').siblings().removeClass('dropdown__link--active');
 })

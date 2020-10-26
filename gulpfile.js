@@ -10,8 +10,11 @@ const spriteSVG = require('./gulp/tasks/spriteSVG');
 const serve = require('./gulp/tasks/serve');
 const convertFonts = require('./gulp/tasks/convertFonts');
 const deploy = require('./gulp/tasks/deploy');
+const favicon = require('./gulp/tasks/favicon');
+const vendorsCSS = require('./gulp/tasks/vendorsCSS');
+const images = require('./gulp/tasks/images');
 
-const dev = gulp.parallel(pug2html, script, vendors, styles, imageMinify, spriteSVG, fonts, convertFonts);
+const dev = gulp.parallel(pug2html, script, vendors, styles, vendorsCSS, images, spriteSVG, fonts, convertFonts);
 
 exports.default = gulp.series(
   clean,
@@ -25,5 +28,13 @@ exports.build = gulp.series(
 );
 
 exports.deploy = gulp.series(
+  images,
+  favicon,
+  injectFav,
   deploy
+);
+
+exports.favicon = gulp.series(
+  favicon,
+  injectFav,
 );

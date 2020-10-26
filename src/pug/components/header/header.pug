@@ -32,10 +32,23 @@ header.header
                     | контакты
 
         .header__buttons
-            .header__item.header__item--gray
+            .header__item.header__item--gray.header__item--dropdown
                 +icon('map')
-            .header__item.header__item--red
+                .dropdown.is-hidden
+                    .dropdown__link.dropdown__link--active
+                        | Санкт-Петербург
+                    .dropdown__link
+                        | Москва
+                    .dropdown__link
+                        | Ростов-на-Дону
+            .header__item.header__item--red.header__item--phone
                 +icon('phone')
+                .phone-content.is-hidden
+                    a.phone-content__link(href="tel:+71111111111" title="")
+                        +icon('phone')
+                        | +71111111111
+                    .phone-content__button.button(data-toggle="modal" data-target="#modal")
+                        | Обратный звонок
             .header__item.header__item--red.menu
                 .menu__default
                     +icon('menu')

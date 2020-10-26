@@ -44,6 +44,11 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+
+	@media (max-width: 480px) {
+		padding: 60px 0;
+		margin: 0;
+	}
 }
 
 .modal-dialog-centered {
@@ -205,13 +210,31 @@
 			&:nth-child(2),
 			&:nth-child(3) {
 				margin-left: -1%;
+
+				@media (max-width: 480px) {
+					display: none;
+				}
 			}
 
 			&:last-child {
 				padding-right: 25px;
 				width: 27%;
 				text-align: right;
+
+				@media (max-width: 480px) {
+					padding-right: 30px;
+					width: 50%;
+				}
 			}
+
+			@media (max-width: 480px) {
+				font-size: 14px;
+			}
+		}
+
+		@media (max-width: 480px) {
+			padding: 0 15px;
+			justify-content: space-between;
 		}
 	}
 
@@ -249,12 +272,31 @@
 				display: none
 			}
 
+			&:nth-child(2),
+			&:nth-child(3) {
+				@media (max-width: 480px) {
+					display: none;
+				}
+			}
+
 			&:last-child {
 				text-align: right;
+
+				@media (max-width: 480px) {
+					width: 100%;
+				}
 			}
 
 			&--bold {
 				font-family: 'Montserrat-SemiBold';
+			}
+
+			@media (max-width: 768px) {
+				font-size: 16px;
+			}
+
+			@media (max-width: 480px) {
+				font-size: 14px;
 			}
 		}
 
@@ -286,6 +328,11 @@
 					width: 50%;
 				}
 			}
+
+			@media (max-width: 480px) {
+				padding: 0 15px;
+				justify-content: space-between;
+			}
 		}
 	}
 }
@@ -315,6 +362,10 @@
 
 	.modal-image {
 		height: 92px;
+
+		@media (max-width: 480px) {
+			display: none;
+		}
 	}
 
 	.modal-title {
@@ -324,6 +375,11 @@
 		align-items: center;
 		font-family: 'Montserrat-SemiBold';
 		font-size: 30px;
+
+		@media (max-width: 480px) {
+			margin-left: 0;
+			font-size: 20px;
+		}
 	}
 
 	.modal-close {
@@ -352,6 +408,13 @@
 			height: 23px;
 			fill: #6D7085;
 		}
+
+		@media (max-width: 480px) {
+			top: -35px;
+			right: 15px;
+			position: absolute;
+			margin: 0;
+		}
 	}
 
 	.modal-label {
@@ -368,6 +431,10 @@
 			width: 14px;
 			height: 14px;
 			fill: $color-white;
+		}
+
+		@media (max-width: 480px) {
+			display: none;
 		}
 	}
 }
