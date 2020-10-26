@@ -159,7 +159,7 @@
             </div>
           </div>
         </div>
-        <div class="causes__button button">Узнать стоимость ремонта</div>
+        <div class="causes__button button" data-toggle="modal" data-target="#modal">Узнать стоимость ремонта</div>
       </div>
     </div>
     <!-- END causes-->
@@ -174,15 +174,15 @@
           <div class="services__desc">Выберите тип устройства</div>
         </div>
         <div class="services__list">
-          <div class="services__item">
+          <div class="services__item" data-toggle="modal" data-target="#repairNotebook">
             <div class="services__view"><img class="services__image" src="/images/notebook.png" alt="@@"></div>
             <div class="services__button button">Ноутбук msi</div>
           </div>
-          <div class="services__item">
+          <div class="services__item" data-toggle="modal" data-target="#repairDesktop">
             <div class="services__view"><img class="services__image" src="/images/pc.png" alt="@@"></div>
             <div class="services__button button">Компьютер msi</div>
           </div>
-          <div class="services__item">
+          <div class="services__item" data-toggle="modal" data-target="#repairMono">
             <div class="services__view"><img class="services__image" src="/images/mono.png" alt="@@"></div>
             <div class="services__button button">моноблок msi</div>
           </div>
@@ -199,7 +199,7 @@
             <div class="warranty__text"><span class="warranty__text--bold">с гарантией 1 год</span>, благодаря своему складу запчастей</div>
             <div class="warranty__text">благодаря своему <br> складу запчастей</div>
           </div>
-          <div class="warranty__button button">Заказать ремонт</div>
+          <div class="warranty__button button" data-toggle="modal" data-target="#modal">Заказать ремонт</div>
         </div>
       </div>
     </div>
@@ -227,7 +227,7 @@
           <div class="master__desc">
             <div class="master__title">Только проверенные специалисты</div>
             <div class="master__text">Закажите ремонт сейчас <br> и получите скидку 15%</div>
-            <div class="master__button button">Заказать ремонт</div>
+            <div class="master__button button" data-toggle="modal" data-target="#modal">Заказать ремонт</div>
           </div>
         </div>
       </div>
@@ -288,7 +288,7 @@
             <div class="stages__text">По завершении ремонта вы получаете исправный девайс и гарантию на фирменном бланке.</div>
           </div>
         </div>
-        <div class="stages__button button">Узнать стоимость ремонта</div>
+        <div class="stages__button button" data-toggle="modal" data-target="#modal">Узнать стоимость ремонта</div>
       </div>
     </div>
     <!-- END stages-->
@@ -298,7 +298,7 @@
         <div class="warranty__body">
           <div class="warranty__title">Гарантия до <span class="shadow--second">365 дней</span> <br> на ремонт и запчасти</div>
           <div class="warranty__text warranty__text--full">Мы предоставляем полную гарантию на производственный ремонт и комплектующие. Работаем на свою репутацию и ваши рекомендации!</div>
-          <div class="warranty__button button">Заказать ремонт</div>
+          <div class="warranty__button button" data-toggle="modal" data-target="#modal">Заказать ремонт</div>
         </div>
       </div>
     </div>
@@ -385,14 +385,14 @@
     <div class="feedback">
       <div class="container">
         <div class="feedback__title">Оставьте заявку сейчас и получите бесплатную консультацию и скидку 15% на ремонт</div>
-        <div class="feedback__form" action="/" method="post">
+        <form class="feedback__form" action="/" method="post">
           <div class="feedback__field">
             <input class="feedback__input input" type="text" name="name" placeholder="Ваше имя">
             <input class="feedback__input input" type="tel" name="tel" placeholder="Ваш телефон" required>
             <button class="feedback__button button">оставить заявку</button>
           </div>
           <div class="feedback__text">Нажимая кнопку “Оставить заявку”, я даю согласие на обработку персональных данных</div>
-        </div>
+        </form>
       </div>
     </div>
     <!-- END feedback-->
@@ -407,6 +407,317 @@
       </div>
     </footer>
     <!-- END footer-->
+        <div class="modal fade" id="repairNotebook" tabindex="-1" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <div class="modal-item"><img class="modal-image" src="/images/notebook.png" alt="@@">
+                  <h5 class="modal-title">Ремонт ноутбуков MSI
+                    <div class="modal-label">
+                      <svg class="svg-sprite-icon icon-arrow-right">
+                        <use xlink:href="images/sprite/symbol/sprite.svg#arrow-right"></use>
+                      </svg>
+                    </div>
+                  </h5>
+                </div>
+                <button class="modal-close" type="button" data-dismiss="modal" aria-label="Close">
+                  <svg class="svg-sprite-icon icon-close">
+                    <use xlink:href="images/sprite/symbol/sprite.svg#close"></use>
+                  </svg>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="price">
+                  <div class="price__head">
+                    <div class="price__item">Тип поломки</div>
+                    <div class="price__item">Время работы</div>
+                    <div class="price__item">Гарантия</div>
+                    <div class="price__item">Стоимость</div>
+                  </div>
+                  <div class="price__body">
+                    <div class="price__field" data-toggle="modal" data-target="#modal" data-dismiss="modal">
+                      <div class="price__item price__item--bold">Не включается</div>
+                      <div class="price__item">от 2 часов</div>
+                      <div class="price__item">1 год</div>
+                      <div class="price__item">Оставить заявку +</div>
+                      <div class="price__item price__item--bold">от 2500 ₽</div>
+                    </div>
+                    <div class="price__field" data-toggle="modal" data-target="#modal" data-dismiss="modal">
+                      <div class="price__item price__item--bold">Нет звука</div>
+                      <div class="price__item">от 2 часов</div>
+                      <div class="price__item">1 год</div>
+                      <div class="price__item">Оставить заявку +</div>
+                      <div class="price__item price__item--bold">от 2500 ₽</div>
+                    </div>
+                    <div class="price__field" data-toggle="modal" data-target="#modal" data-dismiss="modal">
+                      <div class="price__item price__item--bold">Нет изображения</div>
+                      <div class="price__item">от 2 часов</div>
+                      <div class="price__item">1 год</div>
+                      <div class="price__item">Оставить заявку +</div>
+                      <div class="price__item price__item--bold">от 2500 ₽</div>
+                    </div>
+                    <div class="price__field" data-toggle="modal" data-target="#modal" data-dismiss="modal">
+                      <div class="price__item price__item--bold">Шумит</div>
+                      <div class="price__item">от 2 часов</div>
+                      <div class="price__item">1 год</div>
+                      <div class="price__item">Оставить заявку +</div>
+                      <div class="price__item price__item--bold">от 2500 ₽</div>
+                    </div>
+                    <div class="price__field" data-toggle="modal" data-target="#modal" data-dismiss="modal">
+                      <div class="price__item price__item--bold">Греется</div>
+                      <div class="price__item">от 2 часов</div>
+                      <div class="price__item">1 год</div>
+                      <div class="price__item">Оставить заявку +</div>
+                      <div class="price__item price__item--bold">от 2500 ₽</div>
+                    </div>
+                    <div class="price__field" data-toggle="modal" data-target="#modal" data-dismiss="modal">
+                      <div class="price__item price__item--bold">Греется</div>
+                      <div class="price__item">от 2 часов</div>
+                      <div class="price__item">1 год</div>
+                      <div class="price__item">Оставить заявку +</div>
+                      <div class="price__item price__item--bold">от 2500 ₽</div>
+                    </div>
+                    <div class="price__field" data-toggle="modal" data-target="#modal" data-dismiss="modal">
+                      <div class="price__item price__item--bold">Греется</div>
+                      <div class="price__item">от 2 часов</div>
+                      <div class="price__item">1 год</div>
+                      <div class="price__item">Оставить заявку +</div>
+                      <div class="price__item price__item--bold">от 2500 ₽</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="feedback">
+                <div class="feedback__title">Не знаете что случилось? Оставьте заявку и мы бесплатно проконсультируем вас</div>
+                <form class="feedback__form" action="/" method="post">
+                  <div class="feedback__field">
+                    <input class="feedback__input input" type="text" name="name" placeholder="Ваше имя">
+                    <input class="feedback__input input" type="tel" name="tel" placeholder="Ваш телефон" required>
+                    <button class="feedback__button button">оставить заявку</button>
+                  </div>
+                  <div class="feedback__text">Нажимая кнопку “Оставить заявку”, я даю согласие на обработку персональных данных</div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="repairDesktop" tabindex="-1" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <div class="modal-item"><img class="modal-image" src="/images/pc.png" alt="@@">
+                  <h5 class="modal-title">Ремонт компьютеров MSI
+                    <div class="modal-label">
+                      <svg class="svg-sprite-icon icon-arrow-right">
+                        <use xlink:href="images/sprite/symbol/sprite.svg#arrow-right"></use>
+                      </svg>
+                    </div>
+                  </h5>
+                </div>
+                <button class="modal-close" type="button" data-dismiss="modal" aria-label="Close">
+                  <svg class="svg-sprite-icon icon-close">
+                    <use xlink:href="images/sprite/symbol/sprite.svg#close"></use>
+                  </svg>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="price">
+                  <div class="price__head">
+                    <div class="price__item">Тип поломки</div>
+                    <div class="price__item">Время работы</div>
+                    <div class="price__item">Гарантия</div>
+                    <div class="price__item">Стоимость</div>
+                  </div>
+                  <div class="price__body">
+                    <div class="price__field" data-toggle="modal" data-target="#modal" data-dismiss="modal">
+                      <div class="price__item price__item--bold">Не включается</div>
+                      <div class="price__item">от 2 часов</div>
+                      <div class="price__item">1 год</div>
+                      <div class="price__item">Оставить заявку +</div>
+                      <div class="price__item price__item--bold">от 2500 ₽</div>
+                    </div>
+                    <div class="price__field" data-toggle="modal" data-target="#modal" data-dismiss="modal">
+                      <div class="price__item price__item--bold">Нет звука</div>
+                      <div class="price__item">от 2 часов</div>
+                      <div class="price__item">1 год</div>
+                      <div class="price__item">Оставить заявку +</div>
+                      <div class="price__item price__item--bold">от 2500 ₽</div>
+                    </div>
+                    <div class="price__field" data-toggle="modal" data-target="#modal" data-dismiss="modal">
+                      <div class="price__item price__item--bold">Нет изображения</div>
+                      <div class="price__item">от 2 часов</div>
+                      <div class="price__item">1 год</div>
+                      <div class="price__item">Оставить заявку +</div>
+                      <div class="price__item price__item--bold">от 2500 ₽</div>
+                    </div>
+                    <div class="price__field" data-toggle="modal" data-target="#modal" data-dismiss="modal">
+                      <div class="price__item price__item--bold">Шумит</div>
+                      <div class="price__item">от 2 часов</div>
+                      <div class="price__item">1 год</div>
+                      <div class="price__item">Оставить заявку +</div>
+                      <div class="price__item price__item--bold">от 2500 ₽</div>
+                    </div>
+                    <div class="price__field" data-toggle="modal" data-target="#modal" data-dismiss="modal">
+                      <div class="price__item price__item--bold">Греется</div>
+                      <div class="price__item">от 2 часов</div>
+                      <div class="price__item">1 год</div>
+                      <div class="price__item">Оставить заявку +</div>
+                      <div class="price__item price__item--bold">от 2500 ₽</div>
+                    </div>
+                    <div class="price__field" data-toggle="modal" data-target="#modal" data-dismiss="modal">
+                      <div class="price__item price__item--bold">Греется</div>
+                      <div class="price__item">от 2 часов</div>
+                      <div class="price__item">1 год</div>
+                      <div class="price__item">Оставить заявку +</div>
+                      <div class="price__item price__item--bold">от 2500 ₽</div>
+                    </div>
+                    <div class="price__field" data-toggle="modal" data-target="#modal" data-dismiss="modal">
+                      <div class="price__item price__item--bold">Греется</div>
+                      <div class="price__item">от 2 часов</div>
+                      <div class="price__item">1 год</div>
+                      <div class="price__item">Оставить заявку +</div>
+                      <div class="price__item price__item--bold">от 2500 ₽</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="feedback">
+                <div class="feedback__title">Не знаете что случилось? Оставьте заявку и мы бесплатно проконсультируем вас</div>
+                <form class="feedback__form" action="/" method="post">
+                  <div class="feedback__field">
+                    <input class="feedback__input input" type="text" name="name" placeholder="Ваше имя">
+                    <input class="feedback__input input" type="tel" name="tel" placeholder="Ваш телефон" required>
+                    <button class="feedback__button button">оставить заявку</button>
+                  </div>
+                  <div class="feedback__text">Нажимая кнопку “Оставить заявку”, я даю согласие на обработку персональных данных</div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="repairMono" tabindex="-1" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <div class="modal-item"><img class="modal-image" src="/images/mono.png" alt="@@">
+                  <h5 class="modal-title">Ремонт моноблоков MSI
+                    <div class="modal-label">
+                      <svg class="svg-sprite-icon icon-arrow-right">
+                        <use xlink:href="images/sprite/symbol/sprite.svg#arrow-right"></use>
+                      </svg>
+                    </div>
+                  </h5>
+                </div>
+                <button class="modal-close" type="button" data-dismiss="modal" aria-label="Close">
+                  <svg class="svg-sprite-icon icon-close">
+                    <use xlink:href="images/sprite/symbol/sprite.svg#close"></use>
+                  </svg>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="price">
+                  <div class="price__head">
+                    <div class="price__item">Тип поломки</div>
+                    <div class="price__item">Время работы</div>
+                    <div class="price__item">Гарантия</div>
+                    <div class="price__item">Стоимость</div>
+                  </div>
+                  <div class="price__body">
+                    <div class="price__field" data-toggle="modal" data-target="#modal" data-dismiss="modal">
+                      <div class="price__item price__item--bold">Не включается</div>
+                      <div class="price__item" data-toggle="modal" data-target="#modal">от 2 часов</div>
+                      <div class="price__item">1 год</div>
+                      <div class="price__item">Оставить заявку +</div>
+                      <div class="price__item price__item--bold">от 2500 ₽</div>
+                    </div>
+                    <div class="price__field" data-toggle="modal" data-target="#modal" data-dismiss="modal">
+                      <div class="price__item price__item--bold">Нет звука</div>
+                      <div class="price__item">от 2 часов</div>
+                      <div class="price__item">1 год</div>
+                      <div class="price__item">Оставить заявку +</div>
+                      <div class="price__item price__item--bold">от 2500 ₽</div>
+                    </div>
+                    <div class="price__field" data-toggle="modal" data-target="#modal" data-dismiss="modal">
+                      <div class="price__item price__item--bold">Нет изображения</div>
+                      <div class="price__item">от 2 часов</div>
+                      <div class="price__item">1 год</div>
+                      <div class="price__item">Оставить заявку +</div>
+                      <div class="price__item price__item--bold">от 2500 ₽</div>
+                    </div>
+                    <div class="price__field" data-toggle="modal" data-target="#modal" data-dismiss="modal">
+                      <div class="price__item price__item--bold">Шумит</div>
+                      <div class="price__item">от 2 часов</div>
+                      <div class="price__item">1 год</div>
+                      <div class="price__item">Оставить заявку +</div>
+                      <div class="price__item price__item--bold">от 2500 ₽</div>
+                    </div>
+                    <div class="price__field" data-toggle="modal" data-target="#modal" data-dismiss="modal">
+                      <div class="price__item price__item--bold">Греется</div>
+                      <div class="price__item">от 2 часов</div>
+                      <div class="price__item">1 год</div>
+                      <div class="price__item">Оставить заявку +</div>
+                      <div class="price__item price__item--bold">от 2500 ₽</div>
+                    </div>
+                    <div class="price__field" data-toggle="modal" data-target="#modal" data-dismiss="modal">
+                      <div class="price__item price__item--bold">Греется</div>
+                      <div class="price__item">от 2 часов</div>
+                      <div class="price__item">1 год</div>
+                      <div class="price__item">Оставить заявку +</div>
+                      <div class="price__item price__item--bold">от 2500 ₽</div>
+                    </div>
+                    <div class="price__field" data-toggle="modal" data-target="#modal" data-dismiss="modal">
+                      <div class="price__item price__item--bold">Греется</div>
+                      <div class="price__item">от 2 часов</div>
+                      <div class="price__item">1 год</div>
+                      <div class="price__item">Оставить заявку +</div>
+                      <div class="price__item price__item--bold">от 2500 ₽</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="feedback">
+                <div class="feedback__title">Не знаете что случилось? Оставьте заявку и мы бесплатно проконсультируем вас</div>
+                <form class="feedback__form" action="/" method="post">
+                  <div class="feedback__field">
+                    <input class="feedback__input input" type="text" name="name" placeholder="Ваше имя">
+                    <input class="feedback__input input" type="tel" name="tel" placeholder="Ваш телефон" required>
+                    <button class="feedback__button button">оставить заявку</button>
+                  </div>
+                  <div class="feedback__text">Нажимая кнопку “Оставить заявку”, я даю согласие на обработку персональных данных</div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="modal" tabindex="-1" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <div class="modal-item modal-item--column">
+                  <h5 class="modal-title">Напишите нам</h5>
+                  <p>И получите бесплатную консультацию и скидку 15% на все виды ремонта</p>
+                </div>
+                <button class="modal-close" type="button" data-dismiss="modal" aria-label="Close">
+                  <svg class="svg-sprite-icon icon-close">
+                    <use xlink:href="images/sprite/symbol/sprite.svg#close"></use>
+                  </svg>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="feedback feedback--full">
+                  <form class="feedback__form" action="/" method="post">
+                    <div class="feedback__field">
+                      <input class="feedback__input input" type="text" name="name" placeholder="Ваше имя">
+                      <input class="feedback__input input" type="tel" name="tel" placeholder="Ваш телефон" required>
+                      <button class="feedback__button button">оставить заявку</button>
+                    </div>
+                    <div class="feedback__text">Нажимая кнопку “Оставить заявку”, я даю согласие на обработку персональных данных</div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
     <script src="/js/libs.js"></script>
     <script src="/js/main.js"></script>
   </body>

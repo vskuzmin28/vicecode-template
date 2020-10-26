@@ -132,7 +132,7 @@ block content
 						.causes__text
 							| Мы работаем без выходных и готовы выполнить ремонт с 10 утра до 10 вечера
 
-			.causes__button.button
+			.causes__button.button(data-toggle="modal" data-target="#modal")
 				| Узнать стоимость ремонта
 
 	// END causes
@@ -151,19 +151,19 @@ block content
 					| Выберите тип устройства
 			
 			.services__list
-				.services__item
+				.services__item(data-toggle="modal" data-target="#repairNotebook")
 					.services__view
 						img.services__image(src="/images/notebook.png" alt="@@")
 					.services__button.button
 						| Ноутбук msi
 
-				.services__item
+				.services__item(data-toggle="modal" data-target="#repairDesktop")
 					.services__view
 						img.services__image(src="/images/pc.png" alt="@@")
 					.services__button.button
 						| Компьютер msi
 
-				.services__item
+				.services__item(data-toggle="modal" data-target="#repairMono")
 					.services__view
 						img.services__image(src="/images/mono.png" alt="@@")
 					.services__button.button
@@ -184,7 +184,7 @@ block content
 						| #[span.warranty__text--bold с гарантией 1 год], благодаря своему складу запчастей
 					.warranty__text
 						| благодаря своему #[br] складу запчастей
-				.warranty__button.button
+				.warranty__button.button(data-toggle="modal" data-target="#modal")
 					| Заказать ремонт
 
 	// END warranty
@@ -220,7 +220,7 @@ block content
 						| Только проверенные специалисты
 					.master__text
 						| Закажите ремонт сейчас #[br] и получите скидку 15%
-					.master__button.button
+					.master__button.button(data-toggle="modal" data-target="#modal")
 						| Заказать ремонт
 				
 
@@ -318,7 +318,7 @@ block content
 					.stages__text
 						| По завершении ремонта вы получаете исправный девайс и гарантию на фирменном бланке.
 			
-			.stages__button.button
+			.stages__button.button(data-toggle="modal" data-target="#modal")
 				| Узнать стоимость ремонта
 
 	// END stages
@@ -332,7 +332,7 @@ block content
 					| Гарантия до #[span.shadow--second 365 дней] #[br] на ремонт и запчасти
 				.warranty__text.warranty__text--full
 					| Мы предоставляем полную гарантию на производственный ремонт и комплектующие. Работаем на свою репутацию и ваши рекомендации!
-				.warranty__button.button
+				.warranty__button.button(data-toggle="modal" data-target="#modal")
 					| Заказать ремонт
 
 	// END warranty
@@ -415,7 +415,7 @@ block content
 		.container
 			.feedback__title
 				| Оставьте заявку сейчас и получите бесплатную консультацию и скидку 15% на ремонт
-			.feedback__form(action="/" method="post")
+			form.feedback__form(action="/" method="post")
 				.feedback__field
 					input.feedback__input.input(type="text" name="name" placeholder="Ваше имя")
 					input.feedback__input.input(type="tel" name="tel" placeholder="Ваш телефон" required)
@@ -445,3 +445,6 @@ block content
 				+icon('arrow-up')
 
 	// END footer
+
+	+modalRepairs()
+	+modal()

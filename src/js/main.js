@@ -1,9 +1,9 @@
 $(document).scroll(function () {
-    svg4everybody();
+    svg4everybody()
 })
 
 $(document).ready(function(){
-    $(".header, footer, .main__tags").on("click","a", function (event) {
+    $('.header, footer, .main__tags').on("click","a", function (event) {
         event.preventDefault();
         let id  = $(this).attr('href'),
             top = $(id).offset().top - 0;
@@ -12,15 +12,13 @@ $(document).ready(function(){
 })
 
 $(document).scroll(function () {
-    let scroll_status = $(document).scrollTop();
-    let ww = $(window).width();
+    let scroll_status = $(document).scrollTop()
     
-    if (scroll_status > $(".header").height()) {
-      $(".header").addClass('header--float');
+    if (scroll_status > $('.header').height()) {
+      $('.header').addClass('header--float')
     }
     else {
-      $(".header").removeClass('header--float')
-
+      $('.header').removeClass('header--float')
     }
 })
 
@@ -36,4 +34,8 @@ $('.navigation__link').on('click', (e) => {
     
     $('.menu__default, .menu__active').toggleClass('is-hidden')
     $('.navigation').toggleClass('is-visible')
+})
+
+$('#repairNotebook').on('shown.bs.modal', function () {
+    $('#repairNotebook').trigger('focus')
 })

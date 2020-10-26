@@ -1,0 +1,366 @@
+mixin modalRepairs(data)
+    .modal.fade#repairNotebook(tabindex='-1' aria-hidden='true')
+        .modal-dialog.modal-dialog-centered
+            .modal-content
+                .modal-header
+                    .modal-item
+                        img.modal-image(src="/images/notebook.png" alt="@@")
+                        h5.modal-title
+                            | Ремонт ноутбуков MSI
+                            .modal-label
+                                +icon('arrow-right')
+
+                    button.modal-close(type='button' data-dismiss='modal' aria-label='Close')
+                        +icon('close')
+                .modal-body
+                    .price
+                        .price__head
+                            .price__item
+                                | Тип поломки
+                            .price__item
+                                | Время работы
+                            .price__item
+                                | Гарантия
+                            .price__item
+                                | Стоимость
+                        .price__body
+                            .price__field(data-toggle="modal" data-target="#modal" data-dismiss='modal')
+                                .price__item.price__item--bold
+                                    | Не включается
+                                .price__item
+                                    | от 2 часов
+                                .price__item
+                                    | 1 год
+                                .price__item
+                                    | Оставить заявку +
+                                .price__item.price__item--bold
+                                    | от 2500 ₽
+                            .price__field(data-toggle="modal" data-target="#modal" data-dismiss='modal')
+                                .price__item.price__item--bold
+                                    | Нет звука
+                                .price__item
+                                    | от 2 часов
+                                .price__item
+                                    | 1 год
+                                .price__item
+                                    | Оставить заявку +
+                                .price__item.price__item--bold
+                                    | от 2500 ₽
+                            .price__field(data-toggle="modal" data-target="#modal" data-dismiss='modal')
+                                .price__item.price__item--bold
+                                    | Нет изображения
+                                .price__item
+                                    | от 2 часов
+                                .price__item
+                                    | 1 год
+                                .price__item
+                                    | Оставить заявку +
+                                .price__item.price__item--bold
+                                    | от 2500 ₽
+                            .price__field(data-toggle="modal" data-target="#modal" data-dismiss='modal')
+                                .price__item.price__item--bold
+                                    | Шумит
+                                .price__item
+                                    | от 2 часов
+                                .price__item
+                                    | 1 год
+                                .price__item
+                                    | Оставить заявку +
+                                .price__item.price__item--bold
+                                    | от 2500 ₽
+                            .price__field(data-toggle="modal" data-target="#modal" data-dismiss='modal')
+                                .price__item.price__item--bold
+                                    | Греется
+                                .price__item
+                                    | от 2 часов
+                                .price__item
+                                    | 1 год
+                                .price__item
+                                    | Оставить заявку +
+                                .price__item.price__item--bold
+                                    | от 2500 ₽
+                            .price__field(data-toggle="modal" data-target="#modal" data-dismiss='modal')
+                                .price__item.price__item--bold
+                                    | Греется
+                                .price__item
+                                    | от 2 часов
+                                .price__item
+                                    | 1 год
+                                .price__item
+                                    | Оставить заявку +
+                                .price__item.price__item--bold
+                                    | от 2500 ₽
+                            .price__field(data-toggle="modal" data-target="#modal" data-dismiss='modal')
+                                .price__item.price__item--bold
+                                    | Греется
+                                .price__item
+                                    | от 2 часов
+                                .price__item
+                                    | 1 год
+                                .price__item
+                                    | Оставить заявку +
+                                .price__item.price__item--bold
+                                    | от 2500 ₽
+                .feedback
+                    .feedback__title
+                        | Не знаете что случилось? Оставьте заявку и мы бесплатно проконсультируем вас
+                    form.feedback__form(action="/" method="post")
+                        .feedback__field
+                            input.feedback__input.input(type="text" name="name" placeholder="Ваше имя")
+                            input.feedback__input.input(type="tel" name="tel" placeholder="Ваш телефон" required)
+                            button.feedback__button.button
+                                | оставить заявку
+                        .feedback__text
+                            | Нажимая кнопку “Оставить заявку”, я даю согласие на обработку персональных данных
+    
+    .modal.fade#repairDesktop(tabindex='-1' aria-hidden='true')
+        .modal-dialog.modal-dialog-centered
+            .modal-content
+                .modal-header
+                    .modal-item
+                        img.modal-image(src="/images/pc.png" alt="@@")
+                        h5.modal-title
+                            | Ремонт компьютеров MSI
+                            .modal-label
+                                +icon('arrow-right')
+
+                    button.modal-close(type='button' data-dismiss='modal' aria-label='Close')
+                        +icon('close')
+                .modal-body
+                    .price
+                        .price__head
+                            .price__item
+                                | Тип поломки
+                            .price__item
+                                | Время работы
+                            .price__item
+                                | Гарантия
+                            .price__item
+                                | Стоимость
+                        .price__body
+                            .price__field(data-toggle="modal" data-target="#modal" data-dismiss='modal')
+                                .price__item.price__item--bold
+                                    | Не включается
+                                .price__item
+                                    | от 2 часов
+                                .price__item
+                                    | 1 год
+                                .price__item
+                                    | Оставить заявку +
+                                .price__item.price__item--bold
+                                    | от 2500 ₽
+                            .price__field(data-toggle="modal" data-target="#modal" data-dismiss='modal')
+                                .price__item.price__item--bold
+                                    | Нет звука
+                                .price__item
+                                    | от 2 часов
+                                .price__item
+                                    | 1 год
+                                .price__item
+                                    | Оставить заявку +
+                                .price__item.price__item--bold
+                                    | от 2500 ₽
+                            .price__field(data-toggle="modal" data-target="#modal" data-dismiss='modal')
+                                .price__item.price__item--bold
+                                    | Нет изображения
+                                .price__item
+                                    | от 2 часов
+                                .price__item
+                                    | 1 год
+                                .price__item
+                                    | Оставить заявку +
+                                .price__item.price__item--bold
+                                    | от 2500 ₽
+                            .price__field(data-toggle="modal" data-target="#modal" data-dismiss='modal')
+                                .price__item.price__item--bold
+                                    | Шумит
+                                .price__item
+                                    | от 2 часов
+                                .price__item
+                                    | 1 год
+                                .price__item
+                                    | Оставить заявку +
+                                .price__item.price__item--bold
+                                    | от 2500 ₽
+                            .price__field(data-toggle="modal" data-target="#modal" data-dismiss='modal')
+                                .price__item.price__item--bold
+                                    | Греется
+                                .price__item
+                                    | от 2 часов
+                                .price__item
+                                    | 1 год
+                                .price__item
+                                    | Оставить заявку +
+                                .price__item.price__item--bold
+                                    | от 2500 ₽
+                            .price__field(data-toggle="modal" data-target="#modal" data-dismiss='modal')
+                                .price__item.price__item--bold
+                                    | Греется
+                                .price__item
+                                    | от 2 часов
+                                .price__item
+                                    | 1 год
+                                .price__item
+                                    | Оставить заявку +
+                                .price__item.price__item--bold
+                                    | от 2500 ₽
+                            .price__field(data-toggle="modal" data-target="#modal" data-dismiss='modal')
+                                .price__item.price__item--bold
+                                    | Греется
+                                .price__item
+                                    | от 2 часов
+                                .price__item
+                                    | 1 год
+                                .price__item
+                                    | Оставить заявку +
+                                .price__item.price__item--bold
+                                    | от 2500 ₽
+                .feedback
+                    .feedback__title
+                        | Не знаете что случилось? Оставьте заявку и мы бесплатно проконсультируем вас
+                    form.feedback__form(action="/" method="post")
+                        .feedback__field
+                            input.feedback__input.input(type="text" name="name" placeholder="Ваше имя")
+                            input.feedback__input.input(type="tel" name="tel" placeholder="Ваш телефон" required)
+                            button.feedback__button.button
+                                | оставить заявку
+                        .feedback__text
+                            | Нажимая кнопку “Оставить заявку”, я даю согласие на обработку персональных данных
+    
+    .modal.fade#repairMono(tabindex='-1' aria-hidden='true')
+        .modal-dialog.modal-dialog-centered
+            .modal-content
+                .modal-header
+                    .modal-item
+                        img.modal-image(src="/images/mono.png" alt="@@")
+                        h5.modal-title
+                            | Ремонт моноблоков MSI
+                            .modal-label
+                                +icon('arrow-right')
+
+                    button.modal-close(type='button' data-dismiss='modal' aria-label='Close')
+                        +icon('close')
+                .modal-body
+                    .price
+                        .price__head
+                            .price__item
+                                | Тип поломки
+                            .price__item
+                                | Время работы
+                            .price__item
+                                | Гарантия
+                            .price__item
+                                | Стоимость
+                        .price__body
+                            .price__field(data-toggle="modal" data-target="#modal" data-dismiss='modal')
+                                .price__item.price__item--bold
+                                    | Не включается
+                                .price__item(data-toggle="modal" data-target="#modal")
+                                    | от 2 часов
+                                .price__item
+                                    | 1 год
+                                .price__item
+                                    | Оставить заявку +
+                                .price__item.price__item--bold
+                                    | от 2500 ₽
+                            .price__field(data-toggle="modal" data-target="#modal" data-dismiss='modal')
+                                .price__item.price__item--bold
+                                    | Нет звука
+                                .price__item
+                                    | от 2 часов
+                                .price__item
+                                    | 1 год
+                                .price__item
+                                    | Оставить заявку +
+                                .price__item.price__item--bold
+                                    | от 2500 ₽
+                            .price__field(data-toggle="modal" data-target="#modal" data-dismiss='modal')
+                                .price__item.price__item--bold
+                                    | Нет изображения
+                                .price__item
+                                    | от 2 часов
+                                .price__item
+                                    | 1 год
+                                .price__item
+                                    | Оставить заявку +
+                                .price__item.price__item--bold
+                                    | от 2500 ₽
+                            .price__field(data-toggle="modal" data-target="#modal" data-dismiss='modal')
+                                .price__item.price__item--bold
+                                    | Шумит
+                                .price__item
+                                    | от 2 часов
+                                .price__item
+                                    | 1 год
+                                .price__item
+                                    | Оставить заявку +
+                                .price__item.price__item--bold
+                                    | от 2500 ₽
+                            .price__field(data-toggle="modal" data-target="#modal" data-dismiss='modal')
+                                .price__item.price__item--bold
+                                    | Греется
+                                .price__item
+                                    | от 2 часов
+                                .price__item
+                                    | 1 год
+                                .price__item
+                                    | Оставить заявку +
+                                .price__item.price__item--bold
+                                    | от 2500 ₽
+                            .price__field(data-toggle="modal" data-target="#modal" data-dismiss='modal')
+                                .price__item.price__item--bold
+                                    | Греется
+                                .price__item
+                                    | от 2 часов
+                                .price__item
+                                    | 1 год
+                                .price__item
+                                    | Оставить заявку +
+                                .price__item.price__item--bold
+                                    | от 2500 ₽
+                            .price__field(data-toggle="modal" data-target="#modal" data-dismiss='modal')
+                                .price__item.price__item--bold
+                                    | Греется
+                                .price__item
+                                    | от 2 часов
+                                .price__item
+                                    | 1 год
+                                .price__item
+                                    | Оставить заявку +
+                                .price__item.price__item--bold
+                                    | от 2500 ₽
+                .feedback
+                    .feedback__title
+                        | Не знаете что случилось? Оставьте заявку и мы бесплатно проконсультируем вас
+                    form.feedback__form(action="/" method="post")
+                        .feedback__field
+                            input.feedback__input.input(type="text" name="name" placeholder="Ваше имя")
+                            input.feedback__input.input(type="tel" name="tel" placeholder="Ваш телефон" required)
+                            button.feedback__button.button
+                                | оставить заявку
+                        .feedback__text
+                            | Нажимая кнопку “Оставить заявку”, я даю согласие на обработку персональных данных
+
+mixin modal(data)
+    .modal.fade#modal(tabindex='-1' aria-hidden='true')
+        .modal-dialog.modal-dialog-centered
+            .modal-content
+                .modal-header
+                    .modal-item.modal-item--column
+                        h5.modal-title
+                            | Напишите нам
+                        p
+                            | И получите бесплатную консультацию и скидку 15% на все виды ремонта
+
+                    button.modal-close(type='button' data-dismiss='modal' aria-label='Close')
+                        +icon('close')
+                .modal-body
+                    .feedback.feedback--full
+                        form.feedback__form(action="/" method="post")
+                            .feedback__field
+                                input.feedback__input.input(type="text" name="name" placeholder="Ваше имя")
+                                input.feedback__input.input(type="tel" name="tel" placeholder="Ваш телефон" required)
+                                button.feedback__button.button
+                                    | оставить заявку
+                            .feedback__text
+                                | Нажимая кнопку “Оставить заявку”, я даю согласие на обработку персональных данных
