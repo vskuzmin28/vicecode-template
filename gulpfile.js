@@ -13,28 +13,42 @@ const deploy = require('./gulp/tasks/deploy');
 const favicon = require('./gulp/tasks/favicon');
 const vendorsCSS = require('./gulp/tasks/vendorsCSS');
 const images = require('./gulp/tasks/images');
+const pageres = require('./gulp/tasks/screenshot'); 
+const cleanCover = require('./gulp/tasks/screenshot'); 
+const desktop = require('./gulp/tasks/psi'); 
+const mobile = require('./gulp/tasks/psi-mobile'); 
 
-const dev = gulp.parallel(pug2html, script, vendors, styles, vendorsCSS, images, spriteSVG, fonts, convertFonts);
+const dev = gulp.parallel(pug2html, script, vendors, styles, vendorsCSS, images, spriteSVG, fonts, convertFonts)
 
 exports.default = gulp.series(
   clean,
   dev,
   serve
-);
+)
 
 exports.build = gulp.series(
   clean,
   serve
-);
+)
 
 exports.deploy = gulp.series(
   images,
   favicon,
   injectFav,
   deploy
-);
+)
 
 exports.favicon = gulp.series(
   favicon,
   injectFav,
-);
+)
+
+exports.screen = gulp.series(
+  cleanCover,
+  pageres
+)
+
+exports.pagespeed = gulp.parallel(
+  desktop, 
+  mobile
+)
