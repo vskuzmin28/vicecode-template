@@ -353,7 +353,7 @@ block content
 							img.block-head__icon(src="/images/icons/icon-5.png" alt="")
 					.options__title
 						| Бесплатный антивирус
-					.options__button.button
+					.options__button.button(data-toggle="modal" data-target="#modal")
 						| Выбираю антивирус
 
 				.options__item
@@ -362,7 +362,7 @@ block content
 							img.block-head__icon(src="/images/icons/icon-5.png" alt="")
 					.options__title
 						| Скидка 20% на ремонт
-					.options__button.button
+					.options__button.button(data-toggle="modal" data-target="#modal")
 						| Выбираю скидку
 
 	// END options
@@ -438,7 +438,7 @@ block content
 			a.footer__link(href="#" title="")
 				| Политика конфиденциальности
 
-			p.footer__text(href="#" title="")
+			p.footer__text
 				| Цены на сайте не являются публичной офертой
 
 			a.page-up(href="#main" title="")
