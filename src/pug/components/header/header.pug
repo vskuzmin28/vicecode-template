@@ -1,57 +1,5 @@
 // BEGIN header
 
-header.header
-    .header__container.container
-        a.header__logo.logo(href="#" title="")
-            img.logo__icon(src="/assets/images/logo.png" alt="")
-            .logo__content
-                | ремонт #[br] компьютеров
-        ul.header__navigation.navigation
-            li.navigation__item
-                a.navigation__link(href="#causes" title="")
-                    | почему мы?
-        
-            li.navigation__item
-                a.navigation__link(href="#services" title="")
-                    | услуги и цены
 
-            li.navigation__item
-                a.navigation__link(href="#stages" title="")
-                    | как мы работаем
 
-            li.navigation__item
-                a.navigation__link(href="#warranty" title="")
-                    | гарантии
-
-            //- li.navigation__item
-            //-     a.navigation__link(href="#" title="")
-            //-         | акции
-
-            li.navigation__item
-                a.navigation__link(href="#contacts" title="")
-                    | контакты
-
-        .header__buttons
-            .header__item.header__item--gray.header__item--dropdown
-                +icon('map')
-                .dropdown.is-hidden
-                    .dropdown__link.dropdown__link--active
-                        | Санкт-Петербург
-                    .dropdown__link
-                        | Москва
-                    .dropdown__link
-                        | Ростов-на-Дону
-            .header__item.header__item--red.header__item--phone
-                +icon('phone')
-                .phone-content.is-hidden
-                    a.phone-content__link(href="tel:+71111111111" title="")
-                        +icon('phone')
-                        | +71111111111
-                    .phone-content__button.button(data-toggle="modal" data-target="#modal")
-                        | Обратный звонок
-            .header__item.header__item--red.menu
-                .menu__default
-                    +icon('menu')
-                .menu__active.is-hidden
-                    +icon('close')
 // END header
