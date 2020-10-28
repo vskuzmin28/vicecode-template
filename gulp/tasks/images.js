@@ -1,6 +1,6 @@
-const gulp = require('gulp');
+const gulp = require('gulp')
 
-module.exports = function images() {
+module.exports = images = () => {
   return gulp.src('src/images/**/*.*')
     .pipe(gulp.dest('dist/images/'));
-};
+}
