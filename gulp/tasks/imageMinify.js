@@ -2,8 +2,6 @@ const gulp = require('gulp');
 const buffer = require('vinyl-buffer');
 const imagemin = require('gulp-imagemin');
 
-// Минификация и оптимизация изображений
-
 module.exports = function imageMinify() {
   return gulp.src(
     ['src/images/**/*.{gif,png,jpg,svg,webp}',
