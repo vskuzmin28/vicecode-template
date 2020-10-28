@@ -1,8 +1,8 @@
-const gulp = require('gulp');
-const buffer = require('vinyl-buffer');
-const imagemin = require('gulp-imagemin');
+const gulp = require('gulp')
+const buffer = require('vinyl-buffer')
+const imagemin = require('gulp-imagemin')
 
-module.exports = function imageMinify() {
+module.exports = imageMinify = () => {
   return gulp.src(
     ['src/images/**/*.{gif,png,jpg,svg,webp}',
     '!src/images/sprite/**/*']
@@ -23,4 +23,4 @@ module.exports = function imageMinify() {
       })
     ]))
     .pipe(gulp.dest('src/images/'))
-};
+}
