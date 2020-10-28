@@ -1,6 +1,6 @@
-const gulp = require('gulp');
+const gulp = require('gulp')
 
-module.exports = function fonts() {
+module.exports = fonts = () => {
   return gulp.src('src/fonts/**/*.*')
     .pipe(gulp.dest('dist/fonts'))
-};
+}
