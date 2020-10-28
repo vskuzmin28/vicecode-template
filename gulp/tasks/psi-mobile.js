@@ -1,5 +1,5 @@
-const psi = require('psi');
-const site = url = 'https://xn----dtbingmnjlie.xn--90ais/';
+const psi = require('psi')
+const site = url = 'https://xn----dtbingmnjlie.xn--90ais/'
 
 module.exports = function mobile() {
     return psi(site, {
@@ -14,11 +14,11 @@ module.exports = function mobile() {
         console.log('Strategy: ' + 'Mobile')
         console.log('Speed score: ' + JSON.stringify(realScore))
 
-        if(realScore < 80) {
+        if (realScore < 80) {
             console.log('Status page: ERROR')
         }
 
-        if(realScore >= 80) {
+        if (realScore >= 80) {
             console.log('Status page: OK')
         }
     })

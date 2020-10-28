@@ -1,11 +1,6 @@
-const path = require('path');
-const gulp = require('gulp');
-const Pageres = require('pageres');
-
-module.exports = function cleanCover() {
-  return gulp.src('./cover', { read: false })
-  .pipe(clean());
-}
+const path = require('path')
+const gulp = require('gulp')
+const Pageres = require('pageres')
 
 module.exports = function pageres() {
     return new Pageres({delay: 0})

@@ -7,7 +7,7 @@ const FAVICON_DATA_FILE = './faviconData.json';
 module.exports = favicon = done => {
     realFavicon.generateFavicon({
       masterPicture: './src/images/favicon/favicon.png',
-      dest: './dist/images/favicon',
+      dest: './dist/assets/images/favicon',
       iconsPath: 'images/favicon',
       design: {
               ios: {

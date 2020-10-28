@@ -13,5 +13,5 @@ module.exports = function styles() {
       overrideBrowserslist: ['last 15 versions', '> 1%', 'ie 11'],
       cascade: true
     }))
-    .pipe(gulp.dest('dist/css'))
+    .pipe(gulp.dest('dist/assets/css'))
 };
