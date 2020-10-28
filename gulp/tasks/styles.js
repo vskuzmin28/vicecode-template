@@ -6,7 +6,7 @@ const autoprefixer = require('gulp-autoprefixer');
 // Работаем со стилями
 
 module.exports = function styles() {
-  return gulp.src('src/scss/main.scss')
+  return gulp.src('src/scss/style.scss')
     .pipe(plumber())
     .pipe(scss())
     .pipe(autoprefixer({

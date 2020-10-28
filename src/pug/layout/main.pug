@@ -8,12 +8,12 @@ html(lang="ru-RU")
 		title #{title}
 		meta(name="viewport" content="width=320, initial-scale=1")
 		meta(name="keywords" content="")
-		link(rel="stylesheet" type='text/css' href="assets/css/libs.css" media="all")
-		link(rel="stylesheet" type='text/css' href="assets/css/main.css" media="all")
+		link(rel="stylesheet" type='text/css' href="assets/css/vendors.css" media="all")
+		link(rel="stylesheet" type='text/css' href="assets/css/style.css" media="all")
 	body
 		include ../components/header/header
 		include ../components/modal/modal
 		block content
-		script(src="assets/js/libs.js")
-		script(src="assets/js/main.js")
+		script(src="assets/js/vendors.js")
+		script(src="assets/js/scripts.js")
 		block script
