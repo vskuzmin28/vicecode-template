@@ -15,14 +15,11 @@ const vendorsCSS = require('./gulp/tasks/vendorsCSS')
 const images = require('./gulp/tasks/images')
 const pageres = require('./gulp/tasks/screenshot')
 const cleanCover = require('./gulp/tasks/screenshotClean')
-const desktop = require('./gulp/tasks/psi')
-const mobile = require('./gulp/tasks/psi-mobile')
+const pagespeed = require('./gulp/tasks/pagespeed')
 
 const dev = gulp.parallel(pug2html, script, vendors, styles, vendorsCSS, images, spriteSVG, fonts, convertFonts)
 
-const website = 'test-case-land.surge.sh';
-
-exports.website = {website}
+const website = 'test-case-land.surge.sh'
 
 exports.default = gulp.series(
   clean,
@@ -39,7 +36,8 @@ exports.deploy = gulp.series(
   images,
   favicon,
   injectFav,
-  deploy
+  deploy,
+  pagespeed
 )
 
 exports.favicon = gulp.series(
@@ -47,10 +45,7 @@ exports.favicon = gulp.series(
   injectFav,
 )
 
-exports.pagespeed = gulp.parallel(
-  desktop, 
-  mobile
-)
+exports.pagespeed = pagespeed
 
 exports.screen = gulp.series(
   cleanCover,
