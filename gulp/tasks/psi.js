@@ -1,5 +1,5 @@
 const psi = require('psi')
-const site = url = 'https://xn----dtbingmnjlie.xn--90ais/';
+const site = url = 'http://13-1-pro-msi.surge.sh/';
 
 module.exports = function desktop() {
     return psi(site, {
@@ -10,7 +10,7 @@ module.exports = function desktop() {
         const resultParse = JSON.parse(result)
         const realScore = resultParse * 100
 
-        console.log('URL: ' + urlOut)
+        console.log('URL: ' + url)
         console.log('Strategy: ' + 'Desktop')
         console.log('Speed score: ' + JSON.stringify(realScore))
 

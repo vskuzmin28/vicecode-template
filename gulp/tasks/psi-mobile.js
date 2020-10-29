@@ -1,5 +1,5 @@
 const psi = require('psi')
-const site = url = 'https://xn----dtbingmnjlie.xn--90ais/'
+const site = url = 'http://13-1-pro-msi.surge.sh/'
 
 module.exports = function mobile() {
     return psi(site, {

@@ -8,7 +8,7 @@ module.exports = favicon = done => {
     realFavicon.generateFavicon({
       masterPicture: './src/images/favicon/favicon.png',
       dest: './dist/assets/images/favicon',
-      iconsPath: 'images/favicon',
+      iconsPath: 'assets/images/favicon',
       design: {
               ios: {
                   pictureAspect: 'backgroundAndMargin',
