@@ -17,7 +17,7 @@
 
 ```sh
 $ cd vicecode-template
-$ npm install i
+$ npm install
 ```
 
 Запуск в режиме разработки:
