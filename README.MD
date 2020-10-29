@@ -1,8 +1,6 @@
 # VICECODE-TEMPLATE
 Шаблон для разработки сайтов
 
-[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
-
 Автоматизированы такие задачи как:
 
   - Конвертация шрифтов
@@ -19,7 +17,7 @@
 
 ```sh
 $ cd vicecode-template
-$ npm install -i
+$ npm install i
 ```
 
 Запуск в режиме разработки:
