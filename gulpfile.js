@@ -19,7 +19,7 @@ const pagespeed = require('./gulp/tasks/pagespeed')
 
 const dev = gulp.parallel(pug2html, script, vendors, styles, vendorsCSS, images, spriteSVG, fonts, convertFonts)
 
-const website = 'test-case-land.surge.sh'
+// const website = 'test-case-land.surge.sh'
 
 exports.default = gulp.series(
   clean,

@@ -1,17 +1,17 @@
 const psi = require('psi')
-const site = url = 'http://vicecode.ru/'
-// import website from '../../gulpfile'
+const {website} = require('../../variabless.js')
+const url = {website}
 
 module.exports = function pagespeed() {
-    return psi(site, {
+    return psi(website, {
         nokey: 'true',
         strategy: 'desktop'
-    }).then(function (site) {
-        const result = JSON.stringify(site.data.lighthouseResult.categories.performance.score)
+    }).then(function (website) {
+        const result = JSON.stringify(website.data.lighthouseResult.categories.performance.score)
         const resultParse = JSON.parse(result)
         const realScore = resultParse * 100
 
-        console.log('URL: ' + url)
+        console.log('URL: ' + JSON.stringify(url))
         console.log('Strategy: ' + 'Desktop')
         console.log('Speed score: ' + JSON.stringify(realScore))
 
@@ -23,20 +23,20 @@ module.exports = function pagespeed() {
             console.log('Status page: OK')
         }
 
-        // console.log(website)
+        console.log(JSON.parse(url))
     })
 }
 
 exports = mobile = () => psi
-    return psi(site, {
+    return psi(website, {
         nokey: 'true',
         strategy: 'mobile'
-    }).then(function (site) {
-        const result = JSON.stringify(site.data.lighthouseResult.categories.performance.score)
+    }).then(function (website) {
+        const result = JSON.stringify(website.data.lighthouseResult.categories.performance.score)
         const resultParse = JSON.parse(result)
         const realScore = resultParse * 100
 
-        console.log('URL: ' + url)
+        console.log('URL: ' + JSON.stringify(url))
         console.log('Strategy: ' + 'Mobile')
         console.log('Speed score: ' + JSON.stringify(realScore))
 
