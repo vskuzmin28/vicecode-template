@@ -1,1 +1,3 @@
-const website = '444'
+const website = 'vicecode.ru'
+
+module.exports = {website}
