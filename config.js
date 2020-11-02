@@ -1,3 +1,1 @@
-const website = 'undefined'
-
-module.exports = {website}
+const website = '444'

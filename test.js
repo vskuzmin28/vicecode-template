@@ -1,11 +1,11 @@
-const readline = require('readline');
-const fs = require('fs');
-const { stringify } = require('querystring');
+const readline = require('readline')
+const fs = require('fs')
+const { stringify } = require('querystring')
 
 const qrl = readline.createInterface({
   input: process.stdin,
   output: process.stdout
-});
+})
 
 const ws = fs.createWriteStream(__dirname + '/config.js', { flags: 'r+', defaultEncoding: 'utf8' })
 
@@ -17,18 +17,21 @@ qrl.question('What do you think of Node.js? ', (answer) => {
 
   console.log(`Thank you for your valuable feedback: ${answer}`)
 
+  console.log(answer)
   qrl.close()
 
-  return answer
 })
 
-rl.on('line', function (line) {
+const getAnswer = qrl('111')
+console.log(getAnswer)
 
-  if (line.match(/444/)) {
-    line = line.replace(/444/, qrl.question());
-  }
-  ws.write(line + '\n' + '\n' + 'module.exports = {website}')
+// rl.on('line', (line) => {
 
-  rl.close()
+//   if (line.match(/444/)) {
+//     line = line.replace(/444/, qrl.question(answer));
+//   }
 
-})
+//   ws.write(line + '\n' + '\n' + 'module.exports = {website}')
+
+//   rl.close()
+// })
