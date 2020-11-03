@@ -3,11 +3,8 @@
 @import "helpers/fonts";
 @import "helpers/sprite";
 
-@import "./../pug/components/header/header.scss";
-@import "./../pug/components/modal/modal.scss";
-
 html {
-	font-family: 'Montserrat-Regular', Arial, serif;
+	font-family: 'Tahoma', Arial, serif;
 	font-size: 16px;
 	height: 100%;
 }
@@ -28,7 +25,7 @@ body, h1, h2, h3, h4, h5, h6, p, ol, ul {
 	margin: 0;
 	padding: 0;
 	font-weight: normal;
-	color: #fff;
+	color: $color-white;
 }
 
 ol, ul {
