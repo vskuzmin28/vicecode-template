@@ -2,7 +2,6 @@ const gulp = require('gulp')
 const script = require('./gulp/tasks/scripts')
 const fonts = require('./gulp/tasks/fonts')
 const vendors = require('./gulp/tasks/vendorsJS')
-const imageMinify = require('./gulp/tasks/imageMinify')
 const styles = require('./gulp/tasks/styles')
 const clean = require('./gulp/tasks/clean')
 const pug2html = require('./gulp/tasks/pug')
@@ -18,8 +17,6 @@ const cleanCover = require('./gulp/tasks/screenshotClean')
 const pagespeed = require('./gulp/tasks/pagespeed')
 
 const dev = gulp.parallel(pug2html, script, vendors, styles, vendorsCSS, images, spriteSVG, fonts, convertFonts)
-
-// const website = 'test-case-land.surge.sh'
 
 exports.default = gulp.series(
   clean,
