@@ -30,16 +30,11 @@ exports.build = gulp.series(
 )
 
 exports.deploy = gulp.series(
-  images,
+  dev,
   favicon,
   injectFav,
   deploy,
   pagespeed
-)
-
-exports.favicon = gulp.series(
-  favicon,
-  injectFav,
 )
 
 exports.pagespeed = pagespeed
