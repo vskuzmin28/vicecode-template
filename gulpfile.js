@@ -34,7 +34,6 @@ exports.deploy = gulp.series(
   favicon,
   injectFav,
   deploy,
-  pagespeed
 )
 
 // exports.pagespeed = pagespeed
