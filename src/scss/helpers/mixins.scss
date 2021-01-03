@@ -1,34 +1,23 @@
-@mixin box($width,$height: $width) {
-  width: $width;
-  height: $height;
+@mixin list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
-@mixin cover-background {
+
+@mixin bgs-cover {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
-$units: 1px !default;
-@mixin screen($res-first, $res-last: $res-first) {
-  @if $res-first == $res-last {
-    @media screen and (max-width: if(unitless($res-first), ($res-first - 1) *$units, $res-first)) {
-      @content;
-    }
-  }
-  @else if $res-first < $res-last {
-    @media screen and (min-width: if(unitless($res-first), $res-first*$units, $res-first)) and (max-width: if(unitless($res-last), $res-last*$units, $res-last)) {
-      @content;
-    }
-  }
-}
-@mixin min-screen($res) {
-  @media screen and (min-width: if(unitless($res), $res*$units, $res)) {
-    @content;
-  }
+@mixin tablet {
+  @media (max-width: (1024px)) {
+		@content;
+	}
 }
 
-@mixin large {
-	@media (max-width: (1024px)) {
+@mixin mobile {
+  @media (max-width: (480px)) {
 		@content;
 	}
 }
