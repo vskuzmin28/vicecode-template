@@ -5,6 +5,7 @@ const styles = require('./styles');
 const pug2html = require('./pug');
 const script = require('./scripts');
 const ttf2woff2 = require('./convertFonts');
+const images = require('./images');
 
 const server = require('browser-sync').create();
 
@@ -16,7 +17,7 @@ module.exports = function serve(cb) {
     cors: false,
   });
 
-  gulp.watch('src/images/**/*.png').on('change', server.reload);
+  gulp.watch('src/images/**/*.*', gulp.series(images)).on('change', server.reload);
   gulp.watch('src/images/sprite/svg/*.svg', gulp.series(svgSprite)).on('change', server.reload);
   gulp.watch('src/**/*.scss', gulp.series(styles)).on('change', server.reload);
   gulp.watch('src/js/**/*.js', gulp.series(script)).on('change', server.reload);
