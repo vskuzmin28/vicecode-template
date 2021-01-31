@@ -59,10 +59,11 @@ select,
 button { outline: none; }
 
 .is-hidden {
-	display: none !important;
+	visibility: hidden;
+	opacity: 0;
 }
 
 .is-visible {
-	display: flex !important;
-	z-index: 10;
+	visibility: visible;
+	opacity: 1;
 }
