@@ -1,3 +1,5 @@
+@import "vars";
+
 @mixin list {
   margin: 0;
   padding: 0;
@@ -10,20 +12,27 @@
   background-position: center;
 }
 
+@mixin desktop {
+  @media (max-width: ($desktop)) {
+		@content;
+	}
+}
+
+
 @mixin large {
-  @media (max-width: (1200px)) {
+  @media (max-width: ($large)) {
 		@content;
 	}
 }
 
 @mixin tablet {
-  @media (max-width: (992px)) {
+  @media (max-width: ($tablet)) {
 		@content;
 	}
 }
 
 @mixin mobile {
-  @media (max-width: (576px)) {
+  @media (max-width: ($mobile)) {
 		@content;
 	}
 }
