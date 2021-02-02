@@ -58,6 +58,16 @@ input,
 select,
 button { outline: none; }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 .is-hidden {
 	visibility: hidden;
 	opacity: 0;
@@ -67,3 +77,4 @@ button { outline: none; }
 	visibility: visible;
 	opacity: 1;
 }
+
