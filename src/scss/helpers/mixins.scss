@@ -6,6 +6,10 @@
   list-style: none;
 }
 
+@mixin based-animation {
+  transition: $transition-base;
+}
+
 @mixin bgs-cover {
   background-repeat: no-repeat;
   background-size: cover;
