@@ -6,7 +6,7 @@
   list-style: none;
 }
 
-@mixin based-animation {
+@mixin transition {
   transition: $transition-base;
 }
 
