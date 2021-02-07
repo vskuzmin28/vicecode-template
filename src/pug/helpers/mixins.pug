@@ -1,3 +1,7 @@
-mixin icon(className, name)
-	svg(class="svg-sprite-icon icon-" + name + " " + className + "__" + name)
-		use(xlink:href="assets/images/sprite/symbol/sprite.svg#" + name)
+mixin icon(name, className)
+	if (className)
+		svg(class=className + "__" + name + " " + "icon-" + name)
+			use(xlink:href="assets/images/sprite/symbol/sprite.svg#" + name)
+	else
+		svg(class="icon-" + name)
+			use(xlink:href="assets/images/sprite/symbol/sprite.svg#" + name)
