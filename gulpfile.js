@@ -14,7 +14,6 @@ const vendorsCSS = require('./gulp/tasks/vendorsCSS')
 const images = require('./gulp/tasks/images')
 const pageres = require('./gulp/tasks/screenshot')
 const cleanCover = require('./gulp/tasks/screenshotClean')
-// const pagespeed = require('./gulp/tasks/pagespeed')
 
 const dev = gulp.parallel(pug2html, script, vendors, styles, vendorsCSS, images, spriteSVG, fonts, convertFonts)
 
